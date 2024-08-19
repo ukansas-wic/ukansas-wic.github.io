@@ -19,6 +19,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    margin-bottom: 40px; /* Increase this value to add more space */
 }
 
 .container div {
@@ -37,11 +38,12 @@ h2 {
 .contact {
     background-color: #fff;
     padding: 20px;
-    margin: 20px auto;
+    margin: 60px auto; /* Increase the margin-top value to add more space */
     width: 80%;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    
 }
 
 .contact h2 {
