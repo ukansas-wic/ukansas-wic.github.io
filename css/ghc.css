@@ -1,0 +1,346 @@
+/* Basic resets */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;  /* Softer dark color for text */
+    background-color: #f9f9f9;  /* Slightly lighter background */
+    padding: 20px;  
+}
+
+header {
+    background: #ffffff;  /* Clean white background */
+    color: #333;  /* Dark gray text for contrast */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e6c8e3;  /* Subtle border */
+    font-family: 'Fredoka One', sans-serif;
+}
+
+nav ul {
+    list-style: none; /* Ensures no bullet points */
+    background-color: #ffffff;  /* White background for a clean look */
+    border-bottom: 2px solid #e6c8e3;  
+    text-align: center;
+    padding: 10px;
+    margin: 0; /* Ensure no margin that might affect the layout */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;  /* Adds some spacing between menu items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6c8e3;  /* Updated to match the accent color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;  /* Smooth transition for hover effects */
+    font-family: 'Fredoka One', sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #e6c8e3;  
+    color: #ffffff;  /* White text on hover */
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;  /* Slightly wider content area */
+    margin: 40px auto;  /* More spacious margin */
+    padding: 30px;
+    background-color: #ffffff;  /* White background for main content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);  /* Softer shadow for a modern look */
+    border-radius: 10px;  /* Rounded corners for a more modern feel */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;  /* Match the page background */
+    color: #777;  /* Lighter gray text */
+    border-top: 2px solid #e6c8e3; 
+}
+
+/* Section specific styles */
+#overview h2, #experiences h2, #about h2, #top h2, #gallery h2 {
+    color: #e6c8e3;  /* Light purple color for headings */
+    font-family: 'Fredoka One', sans-serif;
+    margin-bottom: 20px;  /* Consistent spacing below headers */
+    font-size: 2rem;  /* Larger font size for headings */
+}
+
+#overview p, #experiences p {
+    padding: 10px 0;  
+    color: #555;  
+}
+
+/* Emphasized text */
+p strong {
+    font-weight: bold;
+    color: #e6c8e3;  /* Accent color for bold text */
+}
+
+p em {
+    font-style: italic;
+    color: #555;  /* Slightly different color for italic text */
+}
+
+/* Highlight Boxes */
+.highlight {
+    background-color: #f4f4f4;  /* Light gray background */
+    border-left: 5px solid #e6c8e3;  
+    padding: 10px 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Callout Boxes */
+.callout {
+    background-color: #ffffff;
+    border: 2px solid #e6c8e3;  /* Accent color for border */
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.callout h3 {
+    color: #e6c8e3;
+    font-family: 'Fredoka One', sans-serif;
+    margin-bottom: 10px;
+}
+
+.callout p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Inline Icons */
+.inline-icon {
+    margin-right: 5px;
+    vertical-align: middle;  /* Align icons with the middle of the text */
+}
+
+/* Improved lists */
+ul, ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+ul li::before {
+    content: '•';
+    color: #e6c8e3;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#experiences blockquote {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    font-style: italic;
+    color: #555;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+}
+
+/* Creating the speech bubble's tail */
+#experiences blockquote:before {
+    content: '';
+    position: absolute;
+    left: 30px; /* Position the tail near the left */
+    bottom: -20px; 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #f9f9f9 transparent transparent transparent; /* Matches the background of the speech bubble */
+}
+
+#experiences blockquote cite {
+    display: block;
+    text-align: right;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Gallery styles */
+#gallery {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carousel-slide img.active {
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);  /* Lighter background for buttons */
+    color: white;
+    border: none;
+    font-size: 20px;  /* Slightly smaller font for buttons */
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;  /* Rounded buttons for a modern look */
+    transition: background-color 0.3s;  
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);  /* Darker background on hover */
+}
+
+/* Accordion styles */
+.accordion {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e6c8e3;
+}
+
+.accordion-header {
+    cursor: pointer;
+    padding: 20px 25px;  /* Increased padding for a bigger look */
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, font-weight 0.3s;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.2rem;  /* Increased font size */
+}
+
+.accordion-item:nth-of-type(odd) {
+    background-color: #f4b5d9;  
+}
+
+.accordion-item:nth-of-type(even) {
+    background-color: #d4d4d4;  
+}
+
+.accordion-header {
+    color: #333333;  
+}
+
+.accordion-header:hover {
+    background-color: #e6c8e3; 
+    color: #ffffff;
+}
+
+.accordion-content {
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px;
+}
+
+.accordion-content p {
+    padding: 20px 0;
+    color: #555;
+    font-size: 1rem;  
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+    justify-content: flex-end; 
+}
+
+.quote-author img {
+    width: 75px; 
+    height: 75px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+
+.quote-author cite {
+    font-family: 'Fredoka One', sans-serif; 
+    font-weight: bold;
+    color: #333;
+}
+
+
+@media (max-width: 600px) {
+    .quote-author {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote-author img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+   
