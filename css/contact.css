@@ -45,7 +45,7 @@ h1 {
 }
 
 .container div a img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Contact Form Section */
@@ -79,18 +79,24 @@ h1 {
 }
 
 #contact-form button {
-    padding: 10px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     border: none;
-    border-radius: 4px;
-    background-color: #8e8e8e;
-    color: white;
-    font-size: 16px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #F691A9;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-left: 200px;
+    font-family: 'Fredoka One', sans-serif; /* Match font */
 }
 
 #contact-form button:hover {
-    background-color: #ffb3f9c3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    background-color: #F691A9;
+    color:#ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
+
