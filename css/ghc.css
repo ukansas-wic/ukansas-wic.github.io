@@ -4,6 +4,9 @@ body, h1, h2, p, ul, li {
     padding: 0;
     box-sizing: border-box;
 }
+h1{
+    color: #467FAB
+}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -42,7 +45,7 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: #e6c8e3;  
+    color: #F691A9;  
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;  
@@ -73,7 +76,7 @@ footer {
 }
 
 #overview h2, #experiences h2, #about h2, #top h2, #gallery h2 {
-    color: #e6c8e3; 
+    color: #F691A9; 
     font-family: 'Fredoka One', sans-serif;
     margin-bottom: 20px;  
     font-size: 2rem;  
@@ -86,7 +89,7 @@ footer {
 
 p strong {
     font-weight: bold;
-    color: #e6c8e3;  
+    color: #F691A9;  
 }
 
 p em {
@@ -277,7 +280,7 @@ ul li::before {
 }
 
 .accordion-header {
-    color: #333333;  
+    color: #555;  
 }
 
 .accordion-header:hover {
