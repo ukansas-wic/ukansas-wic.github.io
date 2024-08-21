@@ -1,87 +1,88 @@
-/* Import Fredoka One Font */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-}
-
 h1 {
     text-align: center;
-    margin-top: 20px;
-    color: #467FAB; /* Blue shade */
+    margin-top: 3%;
+    color: #467FAB; 
     font-size: 3rem;
-    font-family: 'Fredoka One', sans-serif; /* Match font */
-    padding-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    padding-left: 10%;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
-.contact h2 {
-    margin-bottom: 20px;
-    color: #F691A9; /* Pink shade */
-    font-family: 'Fredoka One', sans-serif; /* Match font */
-    text-align: center;
+h3 {
+    text-align: left;
+    color: #F691A9; 
     font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 1%;
+    margin-left: 0;
 }
 
-/* Container for Social Links */
-.container {
+h4 {
+    text-align: left;
+    color: #000000; 
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 1%;
+}
+
+/* Container to hold both the email icon and the contact form side by side */
+.horizontal-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    margin-bottom: 40px; /* Increase this value to add more space */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align content vertically */
+    gap: 80px; /* Space between the email icon and the contact form */
 }
 
-.container div {
-    margin: 0 20px;
-}
-
-.container div a img {
-    transition: transform 0.3s ease;
-}
-
-.container div a img:hover {
-    transform: scale(1.2);
-}
-
-/* Contact Form Section */
 .contact {
-    background-color: #fff;
-    padding: 20px;
-    margin: 60px auto;
-    width: 80%;
-    max-width: 500px;
-    border: 2px solid #ccc; /* More distinct border */
-    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 2%;
+    width: 70%; /* Adjusted width to fit content */
+    max-width: 900px; /* Maximum width to control stretching */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    margin-top: 0%;
 }
-/* Placeholder Text */
+
+#contact-form {
+    flex: 1;
+}
+
 #contact-form input::placeholder,
 #contact-form textarea::placeholder {
-    font-family: 'Arial', sans-serif; /* Apply Arial font to placeholder text */
-    color: #999; /* Optional: adjust color of placeholder text */
+    color: black; 
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
-/* Form Elements */
+
 #contact-form input[type="email"],
 #contact-form input[type="text"],
 #contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #ccc; /* More distinct border for input fields */
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 20px;
+}
+
+#contact-form textarea {
+    padding-bottom: 20%;
+    resize: vertical;
 }
 
 #contact-form button {
+    width: 90%;
+    margin-top: 20px;
     padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
     border: none;
     border-radius: 15px;
     background-color: #ffffff;
@@ -90,13 +91,67 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    margin-left: 200px;
-    font-family: 'Fredoka One', sans-serif; /* Match font */
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
 }
 
 #contact-form button:hover {
     background-color: #F691A9;
-    color:#ffffff;
+    color: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
+.contact .pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+    width: 50%; /* Full width to align content properly */
+    margin-top: 5%;
+    text-align: center; /* Ensure text is centered */
+}
+
+.contact .pictures div {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 30px; /* Add space between the icons */
+}
+
+.contact .pictures h3 {
+    margin-bottom: 0px; /* Spacing between Contact title and email */
+    font-size: 2rem;
+}
+
+.contact .pictures h4 {
+    margin-bottom: 20px; /* Spacing between email and icons */
+    font-size: 1.5rem;
+}
+
+.contact .pictures div a img {
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.contact .pictures div a img:hover {
+    transform: scale(1.3);
+}
+
+.email-icon {
+    width: 30%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .horizontal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        width: 90%;
+    }
+
+    .email-icon {
+        width: 50%; /* Adjust for smaller screens */
+    }
+}
