@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/contact.css">
-    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
     <title>Contact Us</title>
 </head>
 <body>
@@ -13,8 +14,10 @@
         <img src="../pictures/email.webp" alt="Email Icon" class="email-icon">
         <div class="contact">
             <div id="contact-form">
-                <form action="https://formspree.io/f/xkgwbyor" method="POST">
-                    <input type="email" name="_replyto" placeholder="Your Email Address" required>
+                <form action="https://formspree.io/f/xkgwbyor" method="POST"> 
+                    <input type="email" name="_replyto" placeholder="Your Email Address" required><!-- for formspree-->
+                    <!--<form action="https://formsubmit.co/ukansaswic@gmail.com" method="POST">--> 
+                   <!-- <input type="email" name="email" placeholder="Your Email Address" required>--> <!-- for form submit-->
                     <input type="text" name="_subject" placeholder="Subject Line" required>
                     <textarea name="message" placeholder="Type your message" required></textarea>
                     <button type="submit">Send</button>
