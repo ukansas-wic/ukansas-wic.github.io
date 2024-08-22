@@ -7,7 +7,26 @@ body, h1, h2, p, ul, li {
 h1{
     color: #467FAB
 }
+h1 {
+    text-align: center;  /* Center the text */
+    font-family: 'Fredoka One', sans-serif;  /* Use the desired font */
+    color: #467FAB;  /* Keep the original color */
+}
 
+a {
+    text-decoration: none;  /* Remove underline from the link */
+    color: inherit;  /* Ensure the link inherits the color of the parent element */
+}
+a {
+    text-decoration: none;  /* Remove underline from the link */
+    color: inherit;  /* Inherit color from the parent element */
+    cursor: pointer;  /* Change the cursor to indicate it's clickable */
+}
+
+a:hover {
+    text-decoration: underline;  /* Underline the text when hovered */
+    color: #467FAB;  /* Optionally, change the color on hover */
+}
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.8;
