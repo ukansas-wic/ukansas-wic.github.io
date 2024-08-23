@@ -263,7 +263,7 @@ ul li::before {
     outline: none;
     transition: background-color 0.3s, font-weight 0.3s;
     font-family: 'Inter', sans-serif;
-    font-size: 1.2rem; 
+    font-size: 1.3rem; 
     font-weight: 600;
 }
 
