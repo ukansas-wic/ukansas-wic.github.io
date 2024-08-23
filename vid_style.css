@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #FFFEFE;
+}
+
+/* Title Styling */
+.vid_title {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 36px;
+    color: #467FAB;
+}
+
+
+/* Iframe Styling */
+.vid_iframe {
+    border: 0;
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+}
