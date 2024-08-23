@@ -4,10 +4,13 @@ body, h1, h2, p, ul, li {
     box-sizing: border-box;
     margin-bottom: -1%;
 }
-
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 h1 {
     text-align: center;
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #467FAB;
     margin-bottom: -7%;  /* Reduced margin to close the gap */
     padding-bottom: 0;
@@ -26,7 +29,7 @@ a:hover h1{
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.8;
     color: #333; 
     background-color: #f9f9f9;  
@@ -40,7 +43,7 @@ header {
     padding: 2%;  /* Converted 20px to 2% */
     text-align: center;
     border-bottom: 0.2% solid #e6c8e3;  /* Converted 2px to 0.2% */
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 main {
@@ -63,7 +66,7 @@ footer {
 
 #overview h2, #experiences h2, #about h2, #top h2, #gallery h2 {
     color: #F691A9; 
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 2%;  /* Converted 20px to 2% */
     font-size: 2rem;  
     padding-left: 4rem;
@@ -107,7 +110,7 @@ p em {
 
 .callout h3 {
     color: #e6c8e3;
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1%;  /* Converted 10px to 1% */
 }
 
@@ -259,8 +262,9 @@ ul li::before {
     border: none;
     outline: none;
     transition: background-color 0.3s, font-weight 0.3s;
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.2rem; 
+    font-weight: 600;
 }
 
 .accordion-item:nth-of-type(odd) {
@@ -291,7 +295,8 @@ ul li::before {
 .accordion-content p {
     padding: 2% 0;  /* Converted 20px to 2% */
     color: #555;
-    font-size: 1rem;  
+    font-size: 1.1 rem; 
+    font-weight: 500; 
 }
 
 .quote-author {
@@ -307,12 +312,14 @@ ul li::before {
     border-radius: 50%; 
     object-fit: cover; 
     margin-right: 1%;  /* Converted 10px to 1% */
+    margin-top: 1%;
 }
 
 .quote-author cite {
-    font-family: 'Fredoka One', sans-serif; 
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     color: #333;
+
 }
 
 
