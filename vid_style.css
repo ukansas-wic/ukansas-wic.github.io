@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-
 /* General Styles */
 body {
     margin: 0;
@@ -24,26 +23,33 @@ body {
     border-radius: 8px;
 }
 
-.vid-container{
+.vid-container {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.vid-description{
+.vid-description {
     font-size: 18px;
     color: #333;
-    text-align:center;
+    text-align: center;
     margin-bottom: 20px;
     max-width: 600px;
+}
+.download-title{
+    margin-top: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 25px;
+    color: #467FAB;
 }
 
 .accordion {
     width: 70%;
     margin: 20px auto;
-    background-color: #ffffff;
+    background-color: #F5D19E; /* Tan background */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -52,28 +58,29 @@ body {
 .accordion-header {
     cursor: pointer;
     padding: 20px 25px;
-    background-color: #d4d4d4;
+    background-color: #A19A27; /* Green */
     font-size: 1.5rem;
     font-weight: 600;
     text-align: left;
-    transition: background-color 0.3s, font-weight 0.3s;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .accordion-header:hover {
-    background-color: #F691A9;
+    background-color: #F691A9; /* Pink on hover */
     color: #ffffff;
 }
 
 .accordion-content {
     display: none;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #F5D19E; /* Tan */
 }
 
 /* Tab Styles */
 .tabs {
     display: flex;
-    background-color: #ffffff;
+    background-color: #F691A9; /* Pink background */
     border-bottom: 1px solid #ddd;
     padding: 0 20px;
 }
@@ -82,21 +89,33 @@ body {
     padding: 15px 20px;
     cursor: pointer;
     font-size: 1.2rem;
-    color: #467FAB;
+    color: #ffffff; /* White text */
     font-weight: 600;
     border: 1px solid transparent;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .tab:hover, .tab.active {
-    background-color: #467FAB;
+    background-color: #A19A27; /* Green active tab */
     color: #ffffff;
     border-radius: 5px 5px 0 0;
+}
+
+/* Combined Tab & Content Border */
+.tab-content-wrapper {
+    border: 2px solid transparent; /* Initial transparent border */
+    border-radius: 10px; /* Rounded corners for the entire area */
+    transition: border-color 0.3s;
+}
+
+.tab-content-wrapper.active {
+    border-color: #A19A27; /* Green border when active */
 }
 
 .tab-content {
     display: none;
     padding: 20px;
+    background-color: #F5D19E; /* Tan background */
 }
 
 .tab-content.active {
@@ -111,21 +130,21 @@ body {
     padding: 20px;
 }
 
+/* Center Folder and Label */
+
+.folder-icon img {
+    width: 50px;  /* Adjust width */
+    height: 50px; /* Adjust height */
+}
 .folder {
-    width: 100px;
-    height: 100px;
-    background-color: #f4b5d9;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .folder:hover {
-    background-color: #F691A9;
+    background-color: #F691A9; /* Pink on hover */
 }
 
 .folder-icon {
@@ -139,7 +158,14 @@ body {
     color: #ffffff;
     text-align: center;
 }
-
+/* Adjust Folder Label */
+.folder-label a {
+    margin-top: 8px;  /* Space between icon and text */
+    font-size: 14px;  /* Adjust text size */
+    text-decoration: none;
+    color: #333;  /* Text color */
+}
+/* Folder icon container hover effect */
 .folder-icon-container {
     display: flex;
     align-items: center;
@@ -163,16 +189,16 @@ body {
 
 .folder-icon-container a {
     text-decoration: none;
-    color: #333; /* Text color */
+    color: #A19A27; /* Green text */
     font-size: 1.2rem; /* Adjust text size as needed */
     font-weight: 500;
     transition: color 0.2s ease-in-out; /* Smooth color change on hover */
 }
 
 .folder-icon-container:hover {
-    background-color: #e0e0e0; /* Highlight background color on hover */
+    background-color: #F691A9; /* Pink on hover */
 }
 
 .folder-icon-container:hover a {
-    color: #F691A9; /* Change text color on hover */
+    color: #ffffff; /* White text on hover */
 }
