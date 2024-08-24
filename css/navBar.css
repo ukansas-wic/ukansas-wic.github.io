@@ -1,0 +1,83 @@
+/* style for navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    width: 100%;
+    line-height: 50px;
+    padding: 0 5%;
+    margin-top: 2%;
+    position: fixed;
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    margin-right: 10px;
+}
+
+nav .logo a {
+    font-size: 1.5rem; /* Use rem for responsive sizing */
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    font-weight: 800;
+    font-size: 1.5rem; /* Default size for larger screens */
+    color: #467FAB;
+    padding: 0 1.5rem;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: black;
+    transition: all 0.4s ease 0s;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    nav .logo a {
+        font-size: 1.2rem; /* Smaller logo text for smaller screens */
+    }
+    
+    nav li a {
+        font-size: 1.2rem; /* Adjust navigation link size for smaller screens */
+        padding: 0 1rem;   /* Reduce padding to prevent wrapping */
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo a {
+        font-size: 1rem; /* Further reduce logo text size */
+    }
+    
+    nav li a {
+        font-size: 1rem; /* Further reduce nav link size */
+        padding: 0 0.5rem; /* Further reduce padding */
+    }
+}
