@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- Import the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #5D85C7;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1e6;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f1f1e6;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 800; /* Use extra bold weight for the main title */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;  /* Sets a max width for large screens */
+            margin: 0 auto;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;    /* Ensures the slideshow takes full container width */
+            max-width: 100%; /* Ensures it scales down with screen size */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .gallery-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: auto;  /* Maintains aspect ratio */
+            object-fit: contain;  /* Ensures full image is shown */
+            flex-shrink: 0;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;  /* Adjust for spacing from edge */
+        }
+
+        .next {
+            right: 10px; /* Adjust for spacing from edge */
+        }
+
+        .side-logos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+        }
+
+        .side-logos.right {
+            right: 0;
+            left: auto;
+        }
+
+        .side-logos img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            button {
+                padding: 5px;  /* Smaller buttons on mobile */
+            }
+
+            h1 {
+                font-size: 2em;  /* Smaller title on mobile */
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="../css/navBar.css">
+</head>
+<header>
+<nav>
+    <div class="logo">
+        <img src="../wiclogo-comp.png" alt="Logo"/>
+        <a href="#">WIC Tech</a>
+    </div>
+    <ul class="main-nav">
+        <li><a href="index.html">About</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="ghc.html">GHC</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#">GirlCode</a></li>
+        <li><a href="meet_the_team.html">Meet the Team</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+    </ul>
+</nav> 
+</header>
+<body>
+    <div class="header">
+        <h1>Gallery</h1>
+    </div>
+
+    <div class="container">
+        <!-- Slideshow Gallery -->
+        <div class="slideshow-container" id="unified-slideshow">
+            <div class="gallery-slide">
+                <img src="../../pictures/galleryPictures/meeting1.jpg" alt="WIC Meeting 1">
+                <img src="../../pictures/galleryPictures/meeting2.jpg" alt="WIC Meeting 2">
+                <img src="../../pictures/galleryPictures/meeting3.jpg" alt="WIC Meeting 3">
+                <img src="../../pictures/galleryPictures/meeting4.jpg" alt="WIC Meeting 4">
+                <img src="../../pictures/galleryPictures/meeting5.jpg" alt="WIC Meeting 5">
+                <img src="../../pictures/galleryPictures/meeting6.jpg" alt="WIC Meeting 6">
+                <img src="../../pictures/galleryPictures/girlcode1.JPG" alt="Girlcode 1">
+                <img src="../../pictures/galleryPictures/girlcode2.JPG" alt="Girlcode 2">
+            </div>
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slideshow = document.getElementById('unified-slideshow');
+            const slides = slideshow.querySelector('.gallery-slide');
+            const totalSlides = slides.children.length;
+
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            showSlide(currentIndex);
+        }
+
+        // Initialize the slideshow
+        showSlide(0);
+
+    </script>
+</body>
+</html>
