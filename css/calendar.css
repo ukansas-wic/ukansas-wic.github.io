@@ -20,7 +20,8 @@ body {
 /* Reset Margin and Padding for Headings */
 h2, .title {
     margin: 0;  /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    padding-top: 10%git checkout -b new-branch-name
+; /* Remove default padding */
     text-align: center;
     font-size: 3rem;
     color: #467FAB;
