@@ -5,18 +5,23 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+/* Style for navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
 nav {
     width: 100%;
-    line-height: 50px;
-    padding: 0 5%;
-    margin-top: 2%;
-    position: fixed;
-    border-bottom: 2px solid #000;
+    padding: 1% 5%; /* Adjusted padding for spacing */
+    padding-bottom: 2%;
+    border-bottom: 1px solid #e6c8e3; /* Maintain a bottom border for separation */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 2%;
+    background-color: transparent; /* Make the navbar background transparent */
 }
 
 nav .logo {
@@ -29,11 +34,9 @@ nav .logo img {
 }
 
 nav .logo a {
-    font-size: 1.5rem; /* Use rem for responsive sizing */
-    font-weight: bold;
-    color: black;
-    letter-spacing: 1.5px;
-    cursor: pointer;
+    font-size: 1.5rem; /* Consistent font size */
+    font-weight: 800; /* Unified font weight */
+    color: #333; /* Unified color */
     text-decoration: none;
 }
 
@@ -47,27 +50,28 @@ nav li {
 }
 
 nav li a {
-    font-weight: 800;
-    font-size: 1.5rem; /* Default size for larger screens */
-    color: #467FAB;
+    font-weight: 800; /* Unified font weight */
+    font-size: 1.5rem; /* Consistent font size */
+    color: #467FAB; /* Consistent color */
     padding: 0 1.5rem;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 nav li a:hover {
-    color: black;
-    transition: all 0.4s ease 0s;
+    color: #F691A9; /* Unified hover color */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    nav .logo a {
-        font-size: 1.2rem; /* Smaller logo text for smaller screens */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    
+
     nav li a {
-        font-size: 1.2rem; /* Adjust navigation link size for smaller screens */
-        padding: 0 1rem;   /* Reduce padding to prevent wrapping */
+        font-size: 1.2rem; /* Adjusted size for smaller screens */
+        padding: 0.5rem 0; /* Reduced padding for smaller screens */
     }
 }
 
@@ -75,7 +79,7 @@ nav li a:hover {
     nav .logo a {
         font-size: 1rem; /* Further reduce logo text size */
     }
-    
+
     nav li a {
         font-size: 1rem; /* Further reduce nav link size */
         padding: 0 0.5rem; /* Further reduce padding */
