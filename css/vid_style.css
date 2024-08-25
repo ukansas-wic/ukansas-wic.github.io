@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 /* General Styles */
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #FFFEFE;
+body, h1, h2, h3, p {
+    margin: 0; /* Resets default margins */
+    padding: 0; /* Resets default padding */
 }
 
 /* Title Styling */
 .vid-title {
-    margin-top: 20px;
+    margin-top: -15%; /* Reduce from 20px to 10px or less */
     margin-bottom: 24px;
     text-align: center;
-    font-size: 36px;
+    font-size: 3rem;
     color: #467FAB;
 }
-
+nav {
+    margin-bottom: 0px; /* Reduce space below the navbar */
+    padding-bottom: 0px; /* Ensure no extra padding */
+}
 /* Iframe Styling */
 .vid-iframe {
     border: 0;
@@ -29,10 +31,11 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 0; /* Adjust this value as needed */
 }
 
 .vid-description {
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
