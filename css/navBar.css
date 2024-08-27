@@ -1,11 +1,6 @@
-/* style for navbar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-/* Style for navbar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +8,7 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar Styling */
 nav {
     width: 100%;
     padding: 1% 5%; /* Adjusted padding for spacing */
@@ -62,11 +58,37 @@ nav li a:hover {
     color: #F691A9; /* Unified hover color */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap; /* Allows wrapping */
+        justify-content: flex-end;
+    }
+
+    nav li a {
+        font-size: 1.3rem; /* Slightly reduced size */
+        padding: 0 1rem; /* Adjust padding */
+    }
+}
+
+/* Smaller screens (small tablets and large phones) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack logo and links */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav .logo {
+        margin-bottom: 1rem; /* Add space between logo and links */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical list for links */
+        width: 100%; /* Full width for the list */
+        margin-left: 0; /* Reset margin */
     }
 
     nav li a {
@@ -75,6 +97,7 @@ nav li a:hover {
     }
 }
 
+/* Extra small screens (phones) */
 @media (max-width: 480px) {
     nav .logo a {
         font-size: 1rem; /* Further reduce logo text size */
@@ -82,6 +105,10 @@ nav li a:hover {
 
     nav li a {
         font-size: 1rem; /* Further reduce nav link size */
-        padding: 0 0.5rem; /* Further reduce padding */
+        padding: 0.5rem 0; /* Further reduce padding */
+    }
+
+    nav {
+        padding: 1% 2%; /* Reduce overall padding */
     }
 }
