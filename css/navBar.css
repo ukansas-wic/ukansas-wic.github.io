@@ -39,6 +39,7 @@ nav .logo a {
 nav ul {
     display: flex;
     margin-left: auto;
+    gap: 20px; /* Add space between nav items */
 }
 
 nav li {
@@ -49,7 +50,7 @@ nav li a {
     font-weight: 800; /* Unified font weight */
     font-size: 1.5rem; /* Consistent font size */
     color: #467FAB; /* Consistent color */
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* Adjust padding for spacing */
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for hover */
 }
@@ -89,6 +90,7 @@ nav li a:hover {
         flex-direction: column; /* Vertical list for links */
         width: 100%; /* Full width for the list */
         margin-left: 0; /* Reset margin */
+        gap: 10px; /* Adjust gap for smaller screens */
     }
 
     nav li a {
