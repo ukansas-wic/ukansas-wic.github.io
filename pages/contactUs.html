@@ -44,7 +44,7 @@
             <div id="contact-form">
                 <!-- Remove action and add id -->
                 <form id="myForm"> 
-                    <input type="email" name="email" placeholder="Your Email Address" required><!-- for formspree-->
+                    <input type="email" name="email" id ="contactEmail" placeholder="Your Email Address" required><!-- for formspree-->
                     <input type="text" name="subject" placeholder="Subject Line" required>
                     <textarea name="message" placeholder="Type your message" required></textarea>
                     <button type="submit">Send</button>
@@ -70,7 +70,7 @@
             event.preventDefault(); // Prevent the default form submission
     
 
-            const email = document.querySelector('input[name="email"]').value;
+            const email = document.querySelector("#contactEmail").value;
             const subject = document.querySelector('input[name="subject"]').value;
             const message = document.querySelector('textarea[name="message"]').value;
     
@@ -83,7 +83,7 @@
 
             console.log('Sending data:', data);
     
-            fetch('https://prod-133.westus.logic.azure.com:443/wohttps://prod-172.westus.logic.azure.com:443/workflows/cfb928643dbd44cf838140c1d4152946/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Qo1AyzYHZD2unYonz61PszYNkkz9VIFwkfXQO-JlhYgrkflows/2e1774230c2541ba90180e554c1127af/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=flyQ1T_lFi82YKiWv3Q8EUguA4E2lkAVhh8VXU70P_g', {
+            fetch('https://prod-135.westus.logic.azure.com:443/workflows/ba25f612fcee46d18e2124fc18a87ede/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Pity-Gl2jtb1CY8eyzTmFCNiFP9Bn0SGBzBYQu3gvsc', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -103,7 +103,7 @@
             })
             .then(data => {
                 console.log('Success:', data);
-                alert('Message sent successfully!');
+                alert(`Message sent successfully!`);
                 location.reload(); // Refresh the page after the alert is closed
             })
             .catch((error) => {
