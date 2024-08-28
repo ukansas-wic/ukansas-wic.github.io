@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: FFFEFE;
+    background: #FFFEFE;
 }
 
 /* Container to Center Everything */
@@ -14,30 +14,34 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    padding: 0; /* Remove padding to minimize extra space */
 }
 
-/* Title Styling */
-.title {
-    margin-bottom: 24px;
+/* Reset Margin and Padding for Headings */
+h2, .title {
+    margin: 0;  /* Remove default margin */
+    padding-top: 10%git checkout -b new-branch-name
+; /* Remove default padding */
     text-align: center;
-    font-size: 36px;
-    color: 467FAB;
+    font-size: 3rem;
+    color: #467FAB;
 }
 
 /* Calendar Container Styling */
 .calendar-container {
-    width: 100%;
-    max-width: 900px;
-    padding: 20px;
-    background: FFFEFE;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 1%; /* Slight margin to separate title from container */
+    width: 80%; /* Adjust width to a percentage for responsiveness */
+    max-width: 70%;
+    padding: 2%; /* Adjust padding to reduce extra space */
+    background: #FFFEFE; /* Add # for the color to be recognized */
+    border-radius: 2%; /* Adjusted for better scalability */
+    box-shadow: 0 2% 4% rgba(0, 0, 0, 0.2); /* Scaled using percentages */
 }
 
 /* Iframe Styling */
 .calendar-frame {
     border: 0;
     width: 100%;
-    height: 600px;
-    border-radius: 8px;
+    height: 65vh; /* Using viewport height to adapt to different screens */
+    border-radius: 1%; /* Adjusted for better scalability */
 }

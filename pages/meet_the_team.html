@@ -4,80 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet the Team</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navBar.css">
     <style>
-
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 40px;
+    font-size: 4em;
+    color: #467fab;
+    margin-bottom: 80px;
+    padding-top: 2%;
 }
 
+.team-container1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 40px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+}
+.team-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    justify-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team-member img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.team-member h3 {
+    margin: 15px 0 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #bad050;
+}
+
+.team-member p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #141414;
+}
+
+.team-member a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.team-member a:hover {
+    transform: scale(1.05);
+
+}
+@media (max-width: 1235px) {
+    .team-container1, .team-container2 {
+        grid-template-columns: repeat(1, 1fr); 
+        max-width: 600px; 
+        grid-gap: 100px; 
+   
+    }
+
+    .team-member img {
+        width: 400px; 
+        height: 400px;
+    }
+
+    .team-member h3 {
+        font-size: 4em; 
+    }
+
+    .team-member p {
+        font-size: 4em; 
+    }
+}
+
+@media (max-width: 666px) {
+    .team-container1, .team-container2 {
+        grid-template-columns: repeat(1, 1fr); 
+        max-width: 400px; 
+        grid-gap: 100px; 
+   
+    }
+
+    .team-member img {
+        width: 300px; 
+        height: 300px;
+    }
+
+    .team-member h3 {
+        font-size: 2em; 
+    }
+
+    .team-member p {
+        font-size: 2em; 
+    }
+}
     </style>
+
 </head>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="../wiclogo-comp.png" alt="Logo"/>
+            <a href="#">WIC Tech</a>
+        </div>
+        <ul class="main-nav">
+            <li><a href="index.html">About</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="ghc.html">GHC</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tutorialVideoPage.html">Tutorial Videos</a></li>
+            <li><a href="#">GirlCode</a></li>
+            <li><a href="meet_the_team.html">Meet the Team</a></li>
+            <li><a href="contactUs.html">Contact WIC</a></li>
+        </ul>
+    </nav> 
+    </header>
 <body>
-    <h1>Meet the Team</h1>
-    <div class="team-container">
+    <h1>Meet the Exec Board</h1>
+    <div class="team-container1">
         <div class="team-member">
             <a href="./execPages/president.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="President">
-                <h3>President</h3>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQE0v6p3avw54w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708969377794?e=1729728000&v=beta&t=TEnDl3_EW6RzORDsZigXImlzJVQ4SOaOK_TNicaLpC0" alt="President">
+                <h3>Sriya Annem</h3>
+                <p>President</p>
+
             </a>
         </div>
         <div class="team-member">
             <a href="./execPages/vicepresident.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Vice President">
-                <h3>Vice President</h3>
+                <img src="https://media.licdn.com/dms/image/D4E03AQHvjSmUYFwDdA/profile-displayphoto-shrink_800_800/0/1714057075116?e=1729728000&v=beta&t=SBdzP-xGkx9ejIVsMeqUGUQBpNxQEkb3_hiLHDhf0Xk" alt="Vice President">
+                <h3>Audrey Pan</h3>
+                <p>Vice President</p>
+
+            </a>
+        </div>
+        <div class="team-member">
+            <a href="./execPages/treasurer.html">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQGCdLUvndh71w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696435245197?e=1729728000&v=beta&t=PZMaxSmsOKdaMuo7QGOtA-jZ5P_MKdcRhS01Ju3Ic1s" alt="Treasurer">
+                <h3>Anna Ross</h3>
+                <p>Treasurer</p>
             </a>
         </div>
         <div class="team-member">
             <a href="./execPages/outreach1.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Outreach Chair 1">
-                <h3>Outreach Chair</h3>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQHSn8maV5fw2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710385905106?e=1729728000&v=beta&t=Ibw8n9mHfaQvfUlR5uVFcL9XMeXTnQLGD2D5Yb68N2Y" alt="Outreach Chair 1">
+                <h3>Tanu Sakaray</h3>
+                <p>Outreach Chair</p>
+
             </a>
         </div>
         <div class="team-member">
             <a href="./execPages/outreach2.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Outreach Chair 2">
-                <h3>Outreach Chair</h3>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGdEhFgxYrCPw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1663042643193?e=1729728000&v=beta&t=of1kGX1VN3gQzio770t1Md5B5ttkZn3FdA9UAqo1208" alt="Outreach Chair 2">
+                <h3>Christina Sorensen</h3>
+                <p>Outreach Chair</p>
+
             </a>
         </div>
+    </div>
+    <div class ="team-container2">
         <div class="team-member">
             <a href="./execPages/websiterep.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Website Representative">
-                <h3>Website Representative</h3>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQE5mgUPFerBBw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718221368783?e=1729728000&v=beta&t=mWPh4C31votHO5er1RoOwqCjnG8DldF2fzjK92XVgbA" alt="Website Representative">
+                <h3>Sabeen Ahmad</h3>
+                <p>Website Representative</p>
+
             </a>
         </div>
         <div class="team-member">
             <a href="./execPages/soecoordinator.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="SoE Coordinator">
-                <h3>SoE Coordinator</h3>
+                <img src="https://media.licdn.com/dms/image/v2/C4E03AQGBs_YsITgZeg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1646502295605?e=1729728000&v=beta&t=HvelUmyggy93D4wwPDkAw3Avq74VryMHQ9sfuE_iQ6s" alt="SoE Coordinator">
+                <h3>Shayna Weinstein</h3>
+                <p>IHAWKe Representative</p>
+
             </a>
         </div>
         <div class="team-member">
             <a href="./execPages/socialchair.html">
-                <img src="https://ih1.redbubble.net/image.2595320116.9420/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Social Chair">
-                <h3>Social Chair</h3>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGeUx-2R1mj_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721354479439?e=1729728000&v=beta&t=5WIO8-xQeNlpSzXaDhX3PvnKc4rwqOg5bE6KsHlEBDA" alt="Social Chair">
+                <h3>Anna Lin</h3>
+                <p>Social Chair</p>
+
             </a>
         </div>
         <div class="team-member">
             <a href="./execPages/logisticschair.html">
-                <img src="../pictures/logistics_chair.png" alt="Logistics Chair">
-                <h3>Logistics Chair</h3>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQE8soxBsuP5Sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712541554982?e=1729728000&v=beta&t=N8HE46XABHlmlsYwKeGMk-CsKx79QPlMDxCKSP7axiA" alt="Logistics Chair">
+                <h3>Samantha Adorno</h3>
+                <p>Logistics Chair</p>
+
             </a>
         </div>
     </div>
