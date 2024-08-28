@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIC Tech - Social Chair</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf3fc;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto 0 auto;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .profile-image img {
+            width: 300px;
+            height: 360px;
+            object-fit: cover;
+            background-color: #dcdcdc;
+            margin-right: 50px;
+        }
+
+        .profile-info h1 {
+            color: #b7ce48;
+            font-size: 56px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .profile-info h2 {
+            font-size: 28px;
+            color: #333;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .profile-info p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .profile-info .quote {
+            font-style: italic;
+            margin: 25px 0;
+            color: #666;
+        }
+
+        .profile-info a {
+            color: #f0a8b9;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .profile-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .social-links img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .details-container {
+            background-color: #fff;
+            padding: 30px 20px;
+            margin-top: 50px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex-grow: 1;
+        }
+
+        .details-container .profile-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-item h3 {
+            font-size: 20px;
+            color: #4b82ad;
+            margin-bottom: 15px;
+        }
+
+        .detail-item p {
+            color: #666;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="https://static.wikia.nocookie.net/disney/images/d/d5/Profile_-_Mike_Wazowski.jpg/revision/latest?cb=20220608010955" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+                <h1>Anna Lin</h1>
+                <h2>Social Chair</h2>
+                <p><a href="mailto:anna.lin@ku.edu">anna.lin@ku.edu</a></p>
+                <p class="quote">“I joined WIC freshman year to meet and make friends with similar interests and learn more about the tech industry. My favorite part about WIC is the professional growth opportunity where industry speakers share their career journey and advice going into the field.”</p>
+                <div class="social-links">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-container">
+        <div class="profile-details">
+            <div class="detail-item">
+                <h3>Year</h3>
+                <p>Junior</p>
+            </div>
+            <div class="detail-item">
+                <h3>Major/Minor</h3>
+                <p>Computer Science Major<br>Chinese and Math Minor</p>
+            </div>
+            <div class="detail-item">
+                <h3>Hobbies</h3>
+                <p>Watching C-drama</p>
+            </div>
+            <div class="detail-item">
+                <h3>Interests</h3>
+                <p>Junior</p>
+            </div>
+            <div class="detail-item">
+                <h3>Experience</h3>
+                <p>Junior</p>
+            </div>
+            <div class="detail-item">
+                <h3>Fun Fact</h3>
+                <p>I used to be able to solve a 3x3 Rubik’s cube in a minute.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
