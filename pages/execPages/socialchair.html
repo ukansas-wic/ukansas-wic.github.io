@@ -116,6 +116,41 @@
             color: #666;
             font-size: 18px;
         }
+
+        @media (max-width: 792px) {
+    .profile-header {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .profile-image img {
+        width: 100%; 
+        height: auto; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .profile-info h1 {
+        font-size: 48px; 
+    }
+
+    .profile-info h2 {
+        font-size: 24px; 
+    }
+
+    .profile-info p,
+    .profile-info .quote,
+    .profile-info a {
+        font-size: 16px; 
+    }
+
+    .details-container .profile-details {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
     </style>
 </head>
 <body>
