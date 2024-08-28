@@ -53,6 +53,7 @@ nav li a {
     padding: 0 1rem; /* Adjust padding for spacing */
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for hover */
+    white-space: nowrap;
 }
 
 nav li a:hover {
@@ -100,17 +101,26 @@ nav li a:hover {
 }
 
 /* Extra small screens (phones) */
-@media (max-width: 480px) {
-    nav .logo a {
-        font-size: 1rem; /* Further reduce logo text size */
+@media (max-width: 1200px) {
+    .vid-title {
+        font-size: 2.5rem; /* Adjust font size */
+        margin-top: 20px; /* Adjust margin */
     }
-
-    nav li a {
-        font-size: 1rem; /* Further reduce nav link size */
-        padding: 0.5rem 0; /* Further reduce padding */
-    }
-
-    nav {
-        padding: 1% 2%; /* Reduce overall padding */
+    
+    .vid-container {
+        padding: 10px 0; /* Adjust padding for smaller screens */
     }
 }
+
+@media (max-width: 768px) {
+    .vid-title {
+        font-size: 2rem; /* Further adjust font size */
+        margin-top: 10px; /* Further adjust margin */
+    }
+    
+    .vid-container {
+        padding: 5px 0; /* Further adjust padding */
+    }
+}
+
+
