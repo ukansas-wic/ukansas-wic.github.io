@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIC Tech - Social Chair</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #eaf3fc;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; 
             margin: 0;
-            padding: 0;
+            padding: 20px; 
             min-height: 100vh;
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
         }
 
         .profile-container {
-            width: 95%;
-            max-width: 900px;
-            margin: 50px auto 0 auto;
-            padding: 0 20px;
-            flex-grow: 1;
+            width: 100%;
+            max-width: 1000px; 
+            background-color: #f6fcff; 
+            padding: 40px; 
+            color: white; 
+            box-sizing: border-box; 
         }
 
         .profile-header {
             display: flex;
             align-items: center;
-            padding-bottom: 50px;
         }
 
         .profile-image img {
@@ -36,16 +39,14 @@
             height: 380px;
             object-fit: cover;
             background-color: #dcdcdc;
-            margin-right: 50px;
+            margin-right: 75px;
         }
 
         .profile-info h1 {
             color: #b7ce48;
-            font-weight: bold;
+            font-weight: 800;
             margin: 0;
             font-size: 64px;
-            font-style: normal;
-            font-weight: 800;
             line-height: normal;
         }
 
@@ -54,29 +55,26 @@
             margin-bottom: 25px;
             color: #000;
             font-size: 28px;
-            font-style: normal;
             font-weight: 700;
             line-height: normal;
         }
 
         .profile-info p {
-            color: #555;
+            color: #555; 
             font-size: 18px;
         }
 
         .profile-info .quote {
             margin: 25px 0;
             color: #000;
-
+            font-weight: 500;
         }
 
         .profile-info a {
             text-decoration: none;
             color: #ED8BA2;
             font-size: 20px;
-            font-style: normal;
             font-weight: bold;
-            line-height: normal;
         }
 
         .profile-info a:hover {
@@ -95,11 +93,8 @@
 
         .details-container {
             background-color: #fff;
-            padding: 30px 20px;
-            margin-top: 30px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            flex-grow: 1;
+            padding: 20px;
+            margin-top: 20px;
         }
 
         .details-container .profile-details {
