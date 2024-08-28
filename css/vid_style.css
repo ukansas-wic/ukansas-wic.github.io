@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+/* General Styles */
+body, h1, h2, h3, p {
+    margin: 0; /* Resets default margins */
+    padding: 0; /* Resets default padding */
+}
+
+/* Title Styling */
+.vid-title {
+    margin-top: -15%; /* Reduce from 20px to 10px or less */
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 3rem;
+    color: #467FAB;
+}
+nav {
+    margin-bottom: 0px; /* Reduce space below the navbar */
+    padding-bottom: 0px; /* Ensure no extra padding */
+}
+/* Iframe Styling */
+.vid-iframe {
+    border: 0;
+    width: 70%;
+    height: 550px;
+    border-radius: 8px;
+}
+
+.vid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 0; /* Adjust this value as needed */
+}
+
+.vid-description {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+.download-title{
+    margin-top: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 25px;
+    color: #467FAB;
+}
+
+.accordion {
+    width: 70%;
+    margin: 20px auto;
+    background-color: #F5D19E; /* Tan background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.accordion-header {
+    cursor: pointer;
+    padding: 20px 25px;
+    background-color: #A19A27; /* Green */
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #F691A9; /* Pink on hover */
+    color: #ffffff;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0;
+    background-color: #F5D19E; /* Tan */
+}
+
+/* Tab Styles */
+.tabs {
+    display: flex;
+    background-color: #F691A9; /* Pink background */
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+.tab {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ffffff; /* White text */
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover, .tab.active {
+    background-color: #A19A27; /* Green active tab */
+    color: #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Combined Tab & Content Border */
+.tab-content-wrapper {
+    border: 2px solid transparent; /* Initial transparent border */
+    border-radius: 10px; /* Rounded corners for the entire area */
+    transition: border-color 0.3s;
+}
+
+.tab-content-wrapper.active {
+    border-color: #A19A27; /* Green border when active */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #F5D19E; /* Tan background */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Folder Icons */
+.folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Center Folder and Label */
+
+.folder-icon img {
+    width: 50px;  /* Adjust width */
+    height: 50px; /* Adjust height */
+}
+.folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.folder:hover {
+    background-color: #F691A9; /* Pink on hover */
+}
+
+.folder-icon {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.folder-label {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+/* Adjust Folder Label */
+.folder-label a {
+    margin-top: 8px;  /* Space between icon and text */
+    font-size: 14px;  /* Adjust text size */
+    text-decoration: none;
+    color: #333;  /* Text color */
+}
+/* Folder icon container hover effect */
+.folder-icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5%; /* Space between each folder icon container */
+    padding: 0.5%; /* Optional: Add some padding for better spacing */
+    background-color: #ffffff; /* Ensure the background is white or transparent */
+    border-radius: 4px; /* Optional: Rounded corners for a better look */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.folder-icon-container img {
+    width: 50px; /* Adjust size of folder icon as needed */
+    height: 50px; /* Adjust size of folder icon as needed */
+    margin-right: 8px; /* Space between the icon and the text */
+    transition: transform 0.2s ease-in-out; /* Smooth zoom effect on hover */
+}
+
+.folder-icon-container:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.folder-icon-container a {
+    text-decoration: none;
+    color: #A19A27; /* Green text */
+    font-size: 1.2rem; /* Adjust text size as needed */
+    font-weight: 500;
+    transition: color 0.2s ease-in-out; /* Smooth color change on hover */
+}
+
+.folder-icon-container:hover {
+    background-color: #F691A9; /* Pink on hover */
+}
+
+.folder-icon-container:hover a {
+    color: #ffffff; /* White text on hover */
+}
