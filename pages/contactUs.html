@@ -9,38 +9,48 @@
     <link rel="stylesheet" href="../css/navBar.css">
 </head>
 <header>
-<nav>
-    <div class="logo">
-        <img src="../wiclogo-comp.png" alt="Logo"/>
-        <a href="#">WIC Tech</a>
-    </div>
-    <ul class="main-nav">
-        <li><a href="index.html">About</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="ghc.html">GHC</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="tutorialVideoPage.html">Tutorial Videos</a></li>
-        <li><a href="#">GirlCode</a></li>
-        <li><a href="meet_the_team.html">Meet the Team</a></li>
-        <li><a href="contactUs.html">Contact WIC</a></li>
-    </ul>
-</nav> 
+    <nav>
+        <div class="logo">
+            <img src="../wiclogo-comp.png" alt="Logo"/>
+            <a href="#">Women in Computing</a>
+        </div>
+        <ul class="main-nav">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="ghc.html">GHC</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tutorialVideoPage.html">Tutorial Videos</a></li>
+            <li><a href="#">GirlCode</a></li>
+            <li><a href="meet_the_team.html">Meet the Team</a></li>
+            <li><a href="contactUs.html">Contact WIC</a></li>
+        </ul>
+    </nav> 
 </header>
 <body>
     <h1>Get in Touch With WIC</h1>
     <div class="horizontal-container">
-        <img src="../pictures/email.webp" alt="Email Icon" class="email-icon">
-        <div class="contact">
-            <div id="contact-form">
-                <form action="https://formspree.io/f/xkgwbyor" method="POST"> 
-                    <input type="email" name="_replyto" placeholder="Your Email Address" required><!-- for formspree-->
-                    <!--<form action="https://formsubmit.co/ukansaswic@gmail.com" method="POST">--> 
-                   <!-- <input type="email" name="email" placeholder="Your Email Address" required>--> <!-- for form submit-->
-                    <input type="text" name="_subject" placeholder="Subject Line" required>
-                    <textarea name="message" placeholder="Type your message" required></textarea>
+        <div class="newsletter">
+            <!--Newsletter Box-->
+            <h3>Subscribe to Our Newsletter</h3>
+            <div id="newsletterform-form">
+                <form id="newsletterForm"> 
+                    <input type="email" name="email" id = "newsletterEmail" placeholder="Email Address" required><!-- for formspree-->
                     <button type="submit">Send</button>
                 </form>
             </div>
+        </div>
+
+            <!--Contact Form-->
+        <div class="contact">
+            <div id="contact-form">
+                <form id="contactForm"> 
+                    <input type="email" name="email" id = "contactEmail" placeholder="Your Email Address" required>
+                    <input type="text" name="subject" id = "subject" placeholder="Subject Line" required>
+                    <textarea name="message" id = "message" placeholder="Type your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
             <div class="pictures">
                 <h3>Contact</h3>
                 <h4>ukansaswic@gmail.com</h4>
@@ -55,4 +65,95 @@
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        //sending contactForm Email using Power automate
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission??
+    
+            const email = document.querySelector('#contactEmail').value;
+            const subject = document.querySelector('#subject').value;
+            const message = document.querySelector('#message').value;
+            
+            const data = {
+                email: email,
+                subject: subject,
+                message: message
+            };
+    
+            //sending data
+            fetch('https://prod-133.westus.logic.azure.com:443/workflows/2e1774230c2541ba90180e554c1127af/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=flyQ1T_lFi82YKiWv3Q8EUguA4E2lkAVhh8VXU70P_g', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+    
+                // Check the Content-Type to determine how to handle the response
+                const contentType = response.headers.get('Content-Type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json(); // Parse as JSON
+                } else {
+                    return response.text(); // Parse as plain text
+                }
+            })
+            .then(data => {
+                console.log('Success:', data);
+                alert('Message sent successfully!');
+                location.reload(); // Refresh the page after the alert is closed
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending your message: ' + error.message);
+            });
+        });
+
+        //adding to newsletterFomr
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const email = document.querySelector('#newsletterEmail').value;
+    
+            const data = {
+                email: email
+            };
+    
+            console.log('Sending data:', data);
+    
+            fetch('https://prod-172.westus.logic.azure.com:443/workflows/cfb928643dbd44cf838140c1d4152946/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Qo1AyzYHZD2unYonz61PszYNkkz9VIFwkfXQO-JlhYg', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+    
+                // Check the Content-Type to determine how to handle the response
+                const contentType = response.headers.get('Content-Type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json(); // Parse as JSON
+                } else {
+                    return response.text(); // Parse as plain text
+                }
+            })
+            .then(data => {
+                console.log('Success:', data);
+                alert('Added to Newsletter!');
+                location.reload(); // Refresh the page after the alert is closed
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending your message: ' + error.message);
+            });
+        });
+    </script>
+    
 </body>
+</html>
