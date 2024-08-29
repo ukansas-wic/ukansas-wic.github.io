@@ -210,7 +210,7 @@ button:hover {
     color: white; /* White text color for contrast */
     padding: 20px; /* Padding inside the section */
     margin-bottom: 20px; /* Space between each box */
-    width: 80%; /* Sets the width of each box */
+    width: 98%; /* Sets the width of each box */
     display: flex; /* Flexbox for layout */
     justify-content: space-between; /* Space between text and image */
     align-items: center; /* Center vertically */
@@ -250,4 +250,53 @@ button:hover {
 .about-section:hover {
     transform: translateY(-10px); /* Moves the box up when hovered */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #f5dae1; /* Dark background for contrast */
+    color: #ffffff; /* White text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.social-icon img {
+    height: 35px; /* Adjust size of social icons */
+    width: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+.attribution {
+    font-size: 12px;
+    color: #F691A9; /* Light grey text color for attribution */
+}
+
+.attribution a {
+    color: #F691A9;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
 }
