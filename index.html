@@ -3,194 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Subscription Box</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        .header {
-            background-color: #f5f5f5;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .main-content {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #e6e6fa;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .hero-text {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .hero-image {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .me-time {
-            background-color: #f8e4e1;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-
-        .me-time h3 {
-            margin-bottom: 10px;
-        }
-
-        .me-time p {
-            margin-bottom: 20px;
-        }
-
-        .build-box {
-            background-color: #fce4d8;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .build-box h3 {
-            margin-bottom: 20px;
-        }
-
-        .steps {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-        .step {
-            width: 30%;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .footer {
-            background-color: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .brands img {
-            margin: 0 10px;
-            vertical-align: middle;
-        }
-
-        button {
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #ff5a4c;
-        }
-    </style>
+    <title>WICTEC</title>
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../wiclogo-comp.png" alt="Logo"/>
+
+                <a href="#">Women in Computing</a>
+
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html">About</a></li>
+                <li><a href="pages/calendar.html">Calendar</a></li>
+                <li><a href="pages/ghc.html">GHC</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/tutorialVideoPage.html">Tutorial Videos</a></li>
+                <li><a href="#">GirlCode</a></li>
+                <li><a href="pages/meet_the_team.html">Meet the Team</a></li>
+                <li><a href="pages/contactUs.html">Contact WIC</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Content Section -->
     <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-text">
-                <h2>About Us</h2>
-            </div>
-            <div class="hero-image">
-                <img src="pictures/Snapchat-1528989917 (1).jpg" alt="Subscription Box">
-            </div>
-        </section>
 
-        <!-- Me-time Section -->
-        <section class="me-time">
-            <h3>The ultimate "me-time" direct to your door</h3>
-            <p>Learn more about our wine and book subscription boxes and enjoy the ultimate relaxation experience.</p>
-            <button>Sign up</button>
+        <section class="big-pic">
+            <img src="../pictures/woen (4).png" alt="Campus Image"width="100%" height="auto">
         </section>
-
-        <!-- Build Your Box Section -->
-        <section class="build-box">
-            <h3>About WIC</h3>
-            <div class="steps">
-                <div class="step">
-                    <h4>Community</h4>
-                    <p>In the traditionally male-dominated field of computer science, having a supportive community can be a game-changer. Our club at the University of Kansas is dedicated to creating a welcoming space where women and non-binary individuals in tech can connect, collaborate, and thrive. By joining us, you’ll find a network of close friends and mentors who understand the unique challenges you face and are here to offer support and guidance. Participate in enriching discussions, skill-building workshops, and collaborative projects designed to enhance your professional and personal growth. Together, we’re building a strong community that empowers each member to excel in the tech world.</p>
-                </div>
-                <div class="step">
-                    <h4>Industry</h4>
-                    <p>Connect with leading tech companies to provide industry insights and resources that can help with your learning experience
-                        Organize workshops and seminars led by industry professionals, offering real-world advice regarding internships and work experience
-                        Seeking out corporate sponsorships to support club events and activities, ensuring sustained engagement and providing companies with a platform to showcase their commitment to diversity and inclusion in technology.
-                        Provides training to help women become proficient in essential tech skills.
-Once skills are acquired, KUWIC connects participants with externships at various companies for real-world experience.
-</p>
-                </div>
-                <div class="step">
-                    <h4>Grace Hopper</h4>
-                    <p>The Grace Hopper Celebration is the world’s largest gathering of women and non-binary technologists.
-                        Offers unparalleled networking opportunities with peers and industry leaders.
-                        Attend inspiring keynote speeches, panel discussions, and technical sessions.
-                        Participate in workshops designed to enhance professional development.
-                        Gain access to internships at top companies like Amazon, Microsoft, Apple, Uber, Los Alamos, CIA/FBI, and USAA.
-                        </p>
-                </div>
-                <div class="step">
-                    <h4>Girl Code</h4>
-                    <p>Facilitate engaging programming workshops for middle school girls, introducing them to coding fundamentals and starting their passion for technology.
-                        Organize interactive sessions that provide practical experience with coding tools and techniques, helping participants develop a solid foundation in programming and problem-solving.
-                        Manage outreach initiatives and coordinated events, ensuring the smooth execution of workshops and activities.
-                        </p>
-                </div>
+        <section class="about-section">
+            <div class="content">
+                <h2>Who Are We</h2>
+                <p>
+                    The University of Kansas Women in Computing organization is a student-led club established to uphold women and nonbinary people in tech. We offer opportunities to develop technical and proffessional skills and have built a strong community centered around tech.
+                </p>
             </div>
-            <button>Sign up</button>
+            <div class="image">
+                <img src="../pictures/desktop computer-amico.png" alt="Campus Image"width="300" height="300">
+            </div>
         </section>
+        <section class="about-section">
+            <div class="content">
+                <h2>Community</h2>
+                <p>
+                    In the traditionally male-dominated field of computer science, having a supportive community can be a game-changer. Our club at the University of Kansas is dedicated to creating a welcoming space where women and non-binary individuals can connect, collaborate, and thrive. Together, we’re building a strong community that empowers each member to excel in the tech industry.
+                                      
+                </p>
+            </div>
+            <div class="image">
+                <img src="../pictures/community.png" alt="Campus Image" width="300" height="300">
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="content">
+                <h2>Industry</h2>
+                <p>
+                    We connect you with leading tech companies to provide industry insights and resources that can help with your learning experience. We provide training to help members become proficient in essential tech skills and organize workshops and seminars led by industry professionals, offering real-world advice regarding internships and work experience
+                </p>
+            </div>
+            <div class="image">
+                <img src="../pictures/industry.png" alt="Campus Image" width="300" height="300">
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="content">
+                <h2>Grace Hopper</h2>
+                <p>
+                    The Grace Hopper Celebration is the world’s largest gathering of women and non-binary technologists. It offers unparalleled networking opportunities with peers and industry leaders. Attend inspiring keynote speeches, panel discussions, and technical sessions and gain access to internships at top companies like Amazon, Microsoft, Apple, Uber, Los Alamos, CIA/FBI, and USAA.
+                </p>
+            </div>
+            <div class="image">
+                <img src="../pictures/ghcindex.png" alt="Campus Image" width="300" height="300">
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="content">
+                <h2>Girl Code</h2>
+                <p>
+                    We facilitate engaging programming workshops for middle school girls, introducing them to coding fundamentals and starting their passion for technology. Organize interactive sessions that provide practical experience with coding tools and techniques, helping participants develop a solid foundation in programming and problem-solving. 
+                </p>
+            </div>
+            <div class="image">
+                <img src="../pictures/girlcode.png" alt="Campus Image" width="300" height="300">
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- Social Media Links -->
+                <div class="social-media">
+                    <a href="https://github.com/ukansas-wic" target="_blank" class="social-icon">
+                        <img src="../pictures/github.256x249.png" alt="GitHub">
+                    </a>
+                    <a href="www.linkedin.com/in/ku-women-in-computing
+                    " target="_blank" class="social-icon">
+                        <img src="../pictures/linkedinlil.png" alt="LinkedIn">
+                    </a>
+                    </a>
+                    <a href="mailto:ukansaswic@gmail.com" target="_blank" class="social-icon">
+                        <img src="../pictures/email.png" alt="Email">
+                    </a>
+                </div>
+        
+                <!-- Attribution Text -->
+                <p class="attribution">
+                    <a href="https://storyset.com/computer">Computer illustrations by Storyset</a> | 
+                    <a href="https://storyset.com/people">People illustrations by Storyset</a> | 
+                    <a href="https://storyset.com/job">Job illustrations by Storyset</a> | 
+                    <a href="https://storyset.com/business">Business illustrations by Storyset</a>
+                </p>
+            </div>
+        </footer>
+    
     </main>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>As seen in</p>
-        <div class="brands">
-            <img src="https://via.placeholder.com/100x50" alt="Brand 1">
-            <img src="https://via.placeholder.com/100x50" alt="Brand 2">
-            <img src="https://via.placeholder.com/100x50" alt="Brand 3">
-            <img src="https://via.placeholder.com/100x50" alt="Brand 4">
-            <img src="https://via.placeholder.com/100x50" alt="Brand 5">
-        </div>
-    </footer>
+ 
+
 </body>
 </html>

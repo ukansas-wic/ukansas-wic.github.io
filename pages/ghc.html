@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/ghc.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>Grace Hopper Celebration</title>
+    <!-- Import the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/navBar.css">
+
+    <link rel="stylesheet" href="../css/ghc.css">
 </head><header>
     <nav>
         <div class="logo">
             <img src="../wiclogo-comp.png" alt="Logo"/>
-            <a href="#">WIC Tech</a>
+            <a href="#">Women in Computing</a>
         </div>
         <ul class="main-nav">
-            <li><a href="index.html">About</a></li>
+            <li><a href="../index.html">About</a></li>
             <li><a href="calendar.html">Calendar</a></li>
             <li><a href="ghc.html">GHC</a></li>
             <li><a href="gallery.html">Gallery</a></li>
@@ -25,133 +28,148 @@
     </nav> 
 </header>
 <body>
-
-    
-    <main>
-        <a href="https://ghc.anitab.org/" target="_blank">
+    <a href="https://ghc.anitab.org/?utm_medium=cpc&utm_source=google&utm_campaign=GHC23&utm_content=rm_ad1&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyuzTMTG2dUJcHY_WrXMAN15zwLEBz0lyxZ_44ZXK7sGvghrfsQU5mURoCOn0QAvD_BwE" class="header-link">
+        <div class="header">
             <h1>Grace Hopper Celebration (GHC)</h1>
-        </a>
-        <section id="gallery">
-            <div class="carousel">
-                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
-                <div class="carousel-slide">
-                    <img src="../../pictures/ghc_1.jpg" alt="Description of image 1" class="active">
-                    <img src="../../pictures/ghc_2.jpg" alt="Description of image 2">
-                    <img src="../../pictures/ghc_3.jpg" alt="Description of image 3">
-                    <img src="../../pictures/ghc_4.jpg" alt="Description of image 4">
-                </div>
-                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </a>
+
+    <div class="container">
+        <!-- Slideshow Gallery -->
+        <div class="slideshow-container" id="unified-slideshow">
+            <div class="gallery-slide">
+                <img src="../../pictures/ghc_5.jpg" alt="GHC Image 1">
+                <img src="../../pictures/ghc_new.jpg" alt="GHC Image 2">
+                <img src="../../pictures/ghc_new1.jpg" alt="GHC Image 3">
             </div>
-        </section>
-        <section id="overview">
-            <h2>Want to attend GHC for free?</h2>
-            <p>Every year, the <strong>top 15</strong> most active members of Women in Computing (WIC) at KU have the chance to go to the Grace Hopper Celebration (GHC) for <strong>free</strong>!</p>
-        </section>
-
-        <section id="faq">
-            
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">What is GHC?</button>
-                    <div class="accordion-content">
-                        <p>GHC, or the Grace Hopper Celebration, is the world's largest gathering of <strong>women and non-binary</strong> technologists. It's filled with networking, workshops, and talks from industry leaders, all designed to inspire and empower women in tech.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">Why should I attend?</button>
-                    <div class="accordion-content">
-                        <p>Grace Hopper is an incredible opportunity to connect with top industry leaders, pick up new skills, and get inspired by amazing women in tech. It's the perfect place to network, learn, and boost your career in a fun and supportive environment.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item-1">
-                    <button class="accordion-header">How do I become a top 15 member?</button>
-                    <div class="accordion-content">
-                        <p> This is determined by a point system, where you earn points for <strong>attending</strong> general meetings, website meetings, Girl Code events, the KU hackathon, and more. The Vice President tracks the points, and at the end of the year, the 15 members with the most points are chosen to go.</p>
-                    </div>
-                </div>
-                <div class="accordion-item-1">
-                    <button class="accordion-header">If I was selected to attend one year, can I be chosen again?</button>
-                    <div class="accordion-content">
-                        <p> Yes, as long as you're one of the top 15 members each year, you can be chosen to attend multiple times!</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-header">What expenses are covered if I attend?</button>
-                    <div class="accordion-content">
-                        <p>Everything! Your transportation, hotel stay, conference registration, and meals are all taken care of.</p>
-                    </div>
-                </div>
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+    
+    <!-- Moved the promo text outside the container -->
+    <div class="ghc-promo-text">
+        <h1>Want to go to GHC for free?</h1>
+    </div>
+    <div class="ghc-promo-2">
+        <h2>Every year, the <strong>top 15</strong> most active members of Women in Computing (WIC) at KU have the chance to go<br>
+             to the Grace Hopper Celebration (GHC) for <strong>free</strong>!</h2>
+        <!-- Contenedor -->
+        <ul id="accordion" class="accordion">
+        <li>
+            <div class="link"><i class="fa fa-database"></i>What is GHC?<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+            <li><a>The Grace Hopper Celebration is the world’s largest gathering of women and non-binary technologists.</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-code"></i>Why should I attend?<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+            <li><a> It offers unparalleled networking opportunities with peers and industry leaders. You can attend inspiring keynote speeches, panel discussions, and technical sessions and gain access to internships at top companies like Amazon, Microsoft, Apple, Uber, Los Alamos, CIA/FBI, and USAA.</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-mobile"></i>How do I become a top 15 member?<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+            <li><a>This is determined by a point system, where you earn points for <strong>attending</strong> general meetings, website meetings, Girl Code events, the KU hackathon, and more. The Vice President tracks the points, and at the end of the year, the 15 members with the most points are chosen to go.</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-globe"></i>If I was selected to attend one year, can I be chosen again?<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+            <li><a>Yes, as long as you're one of the top 15 members each year, you can be chosen to attend multiple times!</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-question-circle"></i>What expenses are covered if I attend?<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li><a>Everything! Your transportation, hotel stay, conference registration, and meals are all taken care of.</a></li>
+            </ul>
+        </li>
+    </ul>
+        </ul>
+    </div>
+    <div class="quotes">
+        <h1>Quotes from our members</h1>
+    </div>
+    
+    <div class="quotes-container">
+        <div class="quote-box">
+            <p>GHC gave me the opportunity to connect with so many women across the nation. From companies like Disney and Nike to peers at other universities, it was truly a once-in-a-lifetime opportunity.</p>
+            <div class="quote-author">
+                <img src="../../pictures/lauren.jpeg" alt="Lauren D’Souza">
+                <cite>Lauren D’Souza</cite>
             </div>
-        </section>
-    
-        
-        <section id="experiences">
-            <h2>Quotes from our Members</h2>
-            <blockquote>
-                <p>GHC gave me the opportunity to connect with so many women across the nation. From companies like Disney and Nike to peers at other universities, it was truly a once-in-a-lifetime opportunity.</p>
-                    <div class="quote-author">
-                        <img src="../../pictures/lauren.jpeg" alt="Lauren D’Souza">
-                        <cite>- Lauren D’Souza</cite>
-            </blockquote>
-            <blockquote>
-                <p>My favorite part of the Grace Hopper Celebration was the wide variety of talks. I learned so much, from how to negotiate salaries to balancing a career while raising a family. Hearing these insights from women in the field was incredibly valuable.
-                    <div class="quote-author">
-                        <img src="../../pictures/sabeen.jpeg" alt="Sabeen Ahmad">
-                        <cite>- Sabeen Ahmad</cite>
-                    </div>
-                </p>
-                
-            </blockquote>
-    </main>
-    
-    <footer>
-    </footer>
+        </div>
+        <div class="quote-box">
+            <p>My favorite part of the Grace Hopper Celebration was the wide variety of talks. I learned so much, from how to negotiate salaries to balancing a career while raising a family. Hearing these insights from women<br> in the field was incredibly valuable.</p>
+            <div class="quote-author">
+                <img src="../../pictures/sabeen.jpeg" alt="Sabeen Ahmad">
+                <cite>Sabeen Ahmad</cite>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
-        let currentSlide = 0;
+        let currentIndex = 0;
 
         function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-slide img');
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
+            const slideshow = document.getElementById('unified-slideshow');
+            const slides = slideshow.querySelector('.gallery-slide');
+            const totalSlides = slides.children.length;
+
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
         }
 
         function nextSlide() {
-            const slides = document.querySelectorAll('.carousel-slide img');
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
+            currentIndex++;
+            showSlide(currentIndex);
         }
 
         function prevSlide() {
-            const slides = document.querySelectorAll('.carousel-slide img');
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
+            currentIndex--;
+            showSlide(currentIndex);
         }
 
-    
-        showSlide(currentSlide);
+        // Initialize the slideshow
+        showSlide(0);
 
-        // Accordion functionality
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionContent = button.nextElementSibling;
+        $(function () {
+            var Accordion = function (el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
 
-                button.classList.toggle('active');
+                var links = this.el.find(".link");
 
-                if (button.classList.contains('active')) {
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                } else {
-                    accordionContent.style.maxHeight = 0;
+                links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
+            };
+
+            Accordion.prototype.dropdown = function (e) {
+                var $el = e.data.el;
+                ($this = $(this)), ($next = $this.next());
+
+                $next.slideToggle();
+                $this.parent().toggleClass("open");
+
+                if (!e.data.multiple) {
+                    $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
                 }
-            });
+            };
+
+            var accordion = new Accordion($("#accordion"), false);
         });
+                
     </script>
 </body>
 </html>
+
+
 

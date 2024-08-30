@@ -28,7 +28,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e6e6fa;
+    background-color: #e6c8e3;
     padding: 20px;
     margin: 20px 0;
 }
@@ -36,6 +36,11 @@ body {
 .hero-text {
     flex: 1;
     padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #467FAB;
+    margin: 2% 0; /* Consistent margin top and bottom for even spacing */
+    font-size: 2.5rem;
+
 }
 
 .hero-image {
@@ -69,23 +74,17 @@ body {
     border-radius: 10px;
 }
 
-.build-box h3 {
-    margin-bottom: 20px;
-}
-
-.steps {
+/* General styles for the Build Your Box section */
+.build-box {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    flex-direction: column; /* Stacks the boxes vertically */
+    align-items: center; /* Centers the boxes horizontally */
+    margin: 20px; /* Adds some spacing around the section */
 }
 
-.step {
-    width: 30%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+
+
+
 
 .footer {
     background-color: #f5f5f5;
@@ -109,4 +108,195 @@ button {
 
 button:hover {
     background-color: #ff5a4c;
+}
+.footer .brands img {
+    width: 500px;  /* Adjust width as needed */
+    height: auto; /* Maintains the aspect ratio of the images */
+    margin: 10px; /* Space between images */
+}
+
+/* Me-Time Section Styling */
+.me-time {
+    text-align: center; /* Center-align text */
+    margin: 2% auto; /* Center the section with auto margins and 2% top/bottom margin */
+    padding: 2% 5%; /* Add padding for inner space */
+    background-color: #f4f4f4; /* Light gray background for distinction */
+    border-radius: 1%; /* Rounded corners */
+    box-shadow: 0 0 2% rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.me-time h3 {
+    color: #467FAB; /* Main color */
+    margin-bottom: 1%; /* Space below the heading */
+}
+
+.me-time p {
+    font-size: 1.2rem; /* Font size for paragraph */
+    color: #555; /* Text color */
+    margin-bottom: 1%; /* Space below the paragraph */
+}
+
+.me-time button {
+    background-color: #F691A9; /* Button color */
+    color: #fff; /* Text color */
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 0.5rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.me-time button:hover {
+    background-color: #467FAB; /* Darker shade on hover */
+}
+
+/* Build Your Box Section Styling */
+.build-box {
+    max-width: 90%;
+    margin: 3% auto; /* Center the section with auto margins */
+    padding: 2% 5%; /* Add padding for inner space */
+    background-color: #ffffff; /* White background for distinction */
+    border-radius: 1%; /* Rounded corners */
+    box-shadow: 0 0 2% rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+.build-box h3 {
+    text-align: center; /* Center-align text */
+    color: #467FAB; /* Main color */
+    margin-bottom: 2%; /* Space below the heading */
+}
+
+.build-box .steps {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    justify-content: space-between; /* Space items evenly */
+    gap: 2%; /* Space between items */
+}
+
+.build-box .step {
+    flex: 1 1 calc(50% - 4%); /* Responsive item width */
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 2%; /* Inner padding */
+    margin-bottom: 2%; /* Space between items */
+    border-radius: 0.5%; /* Rounded corners */
+    box-shadow: 0 0 1% rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.build-box .step h4 {
+    color: #F691A9; /* Highlight color */
+    margin-bottom: 1%; /* Space below the heading */
+}
+
+.build-box .step p {
+    font-size: 1rem; /* Font size for paragraphs */
+    color: #555; /* Text color */
+    line-height: 1.5; /* Line height for readability */
+    margin-bottom: 1%; /* Space below each paragraph */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .build-box .steps {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .build-box .step {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+}
+.about-section {
+    background-color: #FFC0CB; /* Pink background */
+    color: white; /* White text color for contrast */
+    padding: 20px; /* Padding inside the section */
+    margin-bottom: 20px; /* Space between each box */
+    width: 98%; /* Sets the width of each box */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center vertically */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin: 20px; /* Margin around the section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.about-section .content {
+    flex: 1; /* Takes up space as needed */
+    margin-right: 20px; /* Space between content and image */
+}
+
+.about-section .content h2 {
+    font-size: 2em; /* Size of the heading */
+    font-weight: bold; /* Bold font for heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.about-section .content p {
+    font-size: 1.2em; /* Size of the paragraph */
+    line-height: 1.5; /* Line height for readability */
+}
+
+.about-section .image {
+    flex: 1; /* Takes up space as needed */
+}
+
+.about-section .image img {
+    max-width: 100%; /* Responsive image size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+.about-section:hover {
+    transform: translateY(-10px); /* Moves the box up when hovered */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #f5dae1; /* Dark background for contrast */
+    color: #ffffff; /* White text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.social-icon img {
+    height: 35px; /* Adjust size of social icons */
+    width: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+.attribution {
+    font-size: 12px;
+    color: #F691A9; /* Light grey text color for attribution */
+}
+
+.attribution a {
+    color: #F691A9;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
 }
