@@ -31,7 +31,7 @@ h2, .title {
 .calendar-container {
     margin-top: 1%; /* Slight margin to separate title from container */
     width: 80%; /* Adjust width to a percentage for responsiveness */
-    max-width: 50%;
+    max-width: 70%;
     padding: 2%; /* Adjust padding to reduce extra space */
     background: #FFFEFE; /* Add # for the color to be recognized */
     border-radius: 2%; /* Adjusted for better scalability */
