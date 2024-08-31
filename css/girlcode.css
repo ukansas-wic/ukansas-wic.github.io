@@ -1,0 +1,28 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #5D85C7;
+    margin: 0;
+    padding: 15;
+    background-color: #f1f1e6;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f1f1e6;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    font-weight: 800; /* Use extra bold weight for the main title */
+}
+.gcPromoText {
+    margin: 0;
+    font-weight: 800;
+    margin-top: 30px;
+    color: #F691A9;
+    text-align: center;
+    /* Use extra bold weight for the main title */
+}
