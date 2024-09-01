@@ -12,7 +12,7 @@
     <nav>
         <div class="logo">
             <img src="../wiclogo-comp.png" alt="Logo"/>
-            <a href="#">WIC Tech</a>
+            <a href="#">Women in Computing</a>
         </div>
         <ul class="main-nav">
             <li><a href="../index.html">About</a></li>
@@ -20,7 +20,7 @@
             <li><a href="ghc.html">GHC</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="tutorialVideoPage.html">Tutorial Videos</a></li>
-            <li><a href="#">GirlCode</a></li>
+            <li><a href="girlcode.html">GirlCode</a></li>
             <li><a href="meet_the_team.html">Meet the Team</a></li>
             <li><a href="contactUs.html">Contact WIC</a></li>
         </ul>
@@ -30,26 +30,27 @@
     <h1>Get in Touch With WIC</h1>
     <div class="horizontal-container">
         <div class="newsletter">
+            <!--Newsletter Box-->
             <h3>Subscribe to Our Newsletter</h3>
             <div id="newsletterform-form">
-                <!-- Remove action and add id -->
                 <form id="newsletterForm"> 
-                    <input type="email" name="email" placeholder="Your Email Address" required><!-- for formspree-->
+                    <input type="email" name="email" id = "newsletterEmail" placeholder="Email Address" required><!-- for formspree-->
                     <button type="submit">Send</button>
                 </form>
             </div>
         </div>
 
+            <!--Contact Form-->
         <div class="contact">
             <div id="contact-form">
-                <!-- Remove action and add id -->
-                <form id="myForm"> 
-                    <input type="email" name="email" id ="contactEmail" placeholder="Your Email Address" required><!-- for formspree-->
-                    <input type="text" name="subject" placeholder="Subject Line" required>
-                    <textarea name="message" placeholder="Type your message" required></textarea>
+                <form id="contactForm"> 
+                    <input type="email" name="email" id = "contactEmail" placeholder="Your Email Address" required>
+                    <input type="text" name="subject" id = "subject" placeholder="Subject Line" required>
+                    <textarea name="message" id = "message" placeholder="Type your message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>
+
             <div class="pictures">
                 <h3>Contact</h3>
                 <h4>ukansaswic@gmail.com</h4>
@@ -65,25 +66,25 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-    
 
-            const email = document.querySelector("#contactEmail").value;
-            const subject = document.querySelector('input[name="subject"]').value;
-            const message = document.querySelector('textarea[name="message"]').value;
+
+    <script>
+        //sending contactForm Email using Power automate
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission??
     
+            const email = document.querySelector('#contactEmail').value;
+            const subject = document.querySelector('#subject').value;
+            const message = document.querySelector('#message').value;
+            
             const data = {
                 email: email,
                 subject: subject,
                 message: message
             };
     
-
-            console.log('Sending data:', data);
-    
-            fetch('https://prod-135.westus.logic.azure.com:443/workflows/ba25f612fcee46d18e2124fc18a87ede/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Pity-Gl2jtb1CY8eyzTmFCNiFP9Bn0SGBzBYQu3gvsc', {
+            //sending data
+            fetch('https://prod-133.westus.logic.azure.com:443/workflows/2e1774230c2541ba90180e554c1127af/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=flyQ1T_lFi82YKiWv3Q8EUguA4E2lkAVhh8VXU70P_g', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -111,10 +112,12 @@
                 alert('There was an error sending your message: ' + error.message);
             });
         });
+
+        //adding to newsletterFomr
         document.getElementById('newsletterForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
     
-            const email = document.querySelector('input[name="email"]').value;
+            const email = document.querySelector('#newsletterEmail').value;
     
             const data = {
                 email: email
