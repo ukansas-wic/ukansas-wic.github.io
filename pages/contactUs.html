@@ -35,7 +35,7 @@
             <div id="newsletterform-form">
                 <form id="newsletterForm"> 
                     <input type="email" name="email" id = "newsletterEmail" placeholder="Email Address" required><!-- for formspree-->
-                    <button type="submit">Send</button>
+                    <button type="submit" onclick="Newsletter(event)">Send</button>
                 </form>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     <input type="email" name="email" id = "contactEmail" placeholder="Your Email Address" required>
                     <input type="text" name="subject" id = "subject" placeholder="Subject Line" required>
                     <textarea name="message" id = "message" placeholder="Type your message" required></textarea>
-                    <button type="submit">Send</button>
+                    <button type="submit" onclick="Emailsend(event)">Send</button>
                 </form>
             </div>
 
@@ -69,90 +69,91 @@
 
 
     <script>
-        //sending contactForm Email using Power automate
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission??
-    
-            const email = document.querySelector('#contactEmail').value;
-            const subject = document.querySelector('#subject').value;
-            const message = document.querySelector('#message').value;
-            
-            const data = {
-                email: email,
-                subject: subject,
-                message: message
-            };
-    
-            //sending data
-            fetch('https://prod-133.westus.logic.azure.com:443/workflows/2e1774230c2541ba90180e554c1127af/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=flyQ1T_lFi82YKiWv3Q8EUguA4E2lkAVhh8VXU70P_g', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                console.log('Response status:', response.status);
-    
-                // Check the Content-Type to determine how to handle the response
-                const contentType = response.headers.get('Content-Type');
-                if (contentType && contentType.includes('application/json')) {
-                    return response.json(); // Parse as JSON
-                } else {
-                    return response.text(); // Parse as plain text
-                }
-            })
-            .then(data => {
-                console.log('Success:', data);
-                alert(`Message sent successfully!`);
-                location.reload(); // Refresh the page after the alert is closed
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('There was an error sending your message: ' + error.message);
-            });
-        });
+    function Newsletter(event){
+    event.preventDefault()
 
-        //adding to newsletterFomr
-        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+    const email = document.querySelector('#newsletterEmail').value;
+    const data = {
+        email: email
+    }
+    fetch('https://prod-172.westus.logic.azure.com:443/workflows/cfb928643dbd44cf838140c1d4152946/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Qo1AyzYHZD2unYonz61PszYNkkz9VIFwkfXQO-JlhYg', {
+    method: 'POST',
+      headers: {
+      'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(data)
+  
+      })
+      .then(response => {
+        // Check if the response has content
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        // Only parse JSON if there's content
+        return response.text().then(text => {
+            if (text) {
+                return JSON.parse(text);
+            }
+        });
+    })
     
-            const email = document.querySelector('#newsletterEmail').value;
-    
-            const data = {
-                email: email
-            };
-    
-            console.log('Sending data:', data);
-    
-            fetch('https://prod-172.westus.logic.azure.com:443/workflows/cfb928643dbd44cf838140c1d4152946/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Qo1AyzYHZD2unYonz61PszYNkkz9VIFwkfXQO-JlhYg', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                console.log('Response status:', response.status);
-    
-                // Check the Content-Type to determine how to handle the response
-                const contentType = response.headers.get('Content-Type');
-                if (contentType && contentType.includes('application/json')) {
-                    return response.json(); // Parse as JSON
-                } else {
-                    return response.text(); // Parse as plain text
-                }
-            })
-            .then(data => {
-                console.log('Success:', data);
-                alert('Added to Newsletter!');
-                location.reload(); // Refresh the page after the alert is closed
+    .then(data => {
+                alert('Added to newsletter!');
+                console.log(data)
+                location.reload()
             })
             .catch((error) => {
                 console.error('Error:', error);
                 alert('There was an error sending your message: ' + error.message);
             });
+    
+    };
+        
+
+    function Emailsend(event){
+    event.preventDefault()
+    console.log('called')
+
+    const email = document.querySelector('#contactEmail').value;
+    const subject = document.querySelector('#subject').value;
+    const message = document.querySelector('#message').value;
+    const data = {
+        email: email,
+        subject: subject,
+        message: message
+    }
+    fetch('https://prod-133.westus.logic.azure.com:443/workflows/2e1774230c2541ba90180e554c1127af/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=flyQ1T_lFi82YKiWv3Q8EUguA4E2lkAVhh8VXU70P_g', {
+    method: 'POST',
+      headers: {
+      'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(data)
+  
+      })
+      .then(response => {
+        // Check if the response has content
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        // Only parse JSON if there's content
+        return response.text().then(text => {
+            if (text) {
+                return JSON.parse(text);
+            }
         });
+    })
+    
+    .then(data => {
+                alert('Message Sent!');
+                console.log(data)
+                location.reload()
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending your message: ' + error.message);
+            });
+    
+    };
     </script>
     
 </body>
