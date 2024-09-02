@@ -106,8 +106,9 @@ nav li a:hover {
     margin: 20px auto;
     background-color: #F5D19E;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 30px;
     overflow: hidden;
+    margin-bottom: 5%;
 }
 
 .accordion-header {
@@ -128,7 +129,7 @@ nav li a:hover {
 .accordion-content {
     display: none;
     padding: 20px;
-    background-color: #F5D19E;
+    background-color: #f1f1e6;
 }
 
 .tab-content-wrapper {
