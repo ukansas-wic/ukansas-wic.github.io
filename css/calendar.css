@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #FFFEFE;
+}
+
+/* Container to Center Everything */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0; /* Remove padding to minimize extra space */
+}
+
+/* Reset Margin and Padding for Headings */
+h2, .title {
+    margin: 0;  /* Remove default margin */
+    padding-top: 10%git checkout -b new-branch-name
+; /* Remove default padding */
+    text-align: center;
+    font-size: 3rem;
+    color: #467FAB;
+}
+
+/* Calendar Container Styling */
+.calendar-container {
+    margin-top: 1%; /* Slight margin to separate title from container */
+    width: 80%; /* Adjust width to a percentage for responsiveness */
+    max-width: 70%;
+    padding: 2%; /* Adjust padding to reduce extra space */
+    background: #FFFEFE; /* Add # for the color to be recognized */
+    border-radius: 2%; /* Adjusted for better scalability */
+    box-shadow: 0 2% 4% rgba(0, 0, 0, 0.2); /* Scaled using percentages */
+}
+
+/* Iframe Styling */
+.calendar-frame {
+    border: 0;
+    width: 100%;
+    height: 65vh; /* Using viewport height to adapt to different screens */
+    border-radius: 1%; /* Adjusted for better scalability */
+}

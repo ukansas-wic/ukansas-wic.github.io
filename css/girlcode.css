@@ -1,0 +1,163 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #5D85C7;
+    margin: 0;
+    padding: 15;
+    background-color: #f1f1e6;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f1f1e6;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 3rem;
+    margin: 2%;
+    text-align: center;
+}
+.gcPromoText {
+    margin-left: 10%;
+    font-weight: 800;
+    margin-top: 30px;
+    font-size: 3rem;
+    color: #F691A9;
+    /* Use extra bold weight for the main title */
+}
+
+.gcPromoTextP {
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 1.5rem;
+    color: black;
+    width: 80%;
+    /* Use extra bold weight for the main title */
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    /* Sets a max width for large screens */
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    /* Ensures the slideshow takes full container width */
+    max-width: 100%;
+    /* Ensures it scales down with screen size */
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: contain;
+    /* Ensures full image is shown */
+    flex-shrink: 0;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+    /* Adjust for spacing from edge */
+}
+
+.next {
+    right: 10px;
+    /* Adjust for spacing from edge */
+}
+
+.side-logos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.quotes h1 {
+    font-size: 3rem; /* Optional: Adjust font size */
+    padding-left: 10%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #bad050;
+}
+
+.quotes-container {
+    width: 100%; /* Full width of the page */
+    background-color: #f1f1e6; /* Light gray background */
+    margin-top: -10px;
+    padding: 40px 20px; /* Padding around the quote content */
+}
+
+.quote-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%; /* Max width for content */
+    margin: 0 auto 20px auto; /* Center and add margin at the bottom */
+    text-align: left;
+    display: flex; /* Use flexbox to align text and image side by side */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space out the text and image */
+}
+
+.quote-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 100;
+    padding: 2%;
+    flex: 1; /* Allow the text to take up the available space */
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the name and image to the right */
+    gap: 20px;
+}
+
+.quote-author cite {
+    font-size: 1rem;
+    color: #000000;
+    margin-right: 50px; /* Add space between the name and the image */
+}
+
+.quote-author img {
+    width: 80px; /* Set image size */
+    height: 80px; /* Maintain square shape */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote-box:hover {
+    transform: translateY(-10px); /* Moves the box up slightly when hovered */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}

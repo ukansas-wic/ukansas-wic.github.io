@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIC Tech - Social Chair</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/navBar.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 20px; 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 1100px; 
+            background-color: #f6fcff; 
+            padding: 40px; 
+            color: white; 
+            box-sizing: border-box; 
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image img {
+            width: 300px;
+            height: 380px;
+            object-fit: cover;
+            background-color: #dcdcdc;
+            margin-right: 75px;
+        }
+
+        .profile-info h1 {
+            color: #b7ce48;
+            font-weight: 800;
+            margin: 0;
+            font-size: 64px;
+            line-height: normal;
+        }
+
+        .profile-info h2 {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            color: #000;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .profile-info p {
+            color: #555; 
+            font-size: 18px;
+        }
+
+        .profile-info .quote {
+            margin: 25px 0;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .profile-info a {
+            text-decoration: none;
+            color: #ED8BA2;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .profile-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .social-links img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .details-container {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .details-container .profile-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-item h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #467FAB;
+            margin-bottom: 15px;
+        }
+
+        .detail-item p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        @media (max-width: 792px) {
+    .profile-header {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .profile-image img {
+        width: 100%; 
+        height: auto; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .profile-info h1 {
+        font-size: 48px; 
+    }
+
+    .profile-info h2 {
+        font-size: 24px; 
+    }
+
+    .profile-info p,
+    .profile-info .quote,
+    .profile-info a {
+        font-size: 16px; 
+    }
+
+    .details-container .profile-details {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+    </style>
+    <nav>
+        <div class="logo">
+            <img src="../../wiclogo-comp.png" alt="Logo"/>
+            <a href="#">Women in Computing</a>
+        </div>
+        <ul class="main-nav">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="../calendar.html">Calendar</a></li>
+            <li><a href="../ghc.html">GHC</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../tutorialVideoPage.html">Tutorial Videos</a></li>
+            <li><a href="#">GirlCode</a></li>
+            <li><a href="../meet_the_team.html">Meet the Team</a></li>
+            <li><a href="../contactUs.html">Contact WIC</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="../../pictures/sriyapage.jpg" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+                <h1>Sriya Annem</h1>
+                <h2>President</h2>
+                <p><a href="mailto:sriyaannem@ku.edu">sriyaannem@ku.edu</a></p>
+                <p class="quote">“I joined WIC to network with others and gain opportunities in the tech industry. My favorite part about WIC is the incredible people and community I’ve built over the years. From sitting next to them in class, to hanging out, to creating this website together, it’s been such a rewarding experience.”</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sriya.annem/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/sriya-annem"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/sannem1"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-container">
+        <div class="profile-details">
+            <div class="detail-item">
+                <h3>Year</h3>
+                <p>Junior</p>
+            </div>
+            <div class="detail-item">
+                <h3>Major/Minor</h3>
+                <p>Computer Science Major<br>Cyber Security Certificate</p>
+            </div>
+            <div class="detail-item">
+                <h3>Hobbies</h3>
+                <p>Getting a sweet treat with my friends💗</p>
+            </div>
+            <div class="detail-item">
+                <h3>Interests</h3>
+                <p>Software Engineering<br>Management<br>Cybersecurity<br>Full Stack Development</p>
+            </div>
+            <div class="detail-item">
+                <h3>Experience</h3>
+                <p>Software Engineer Intern @ Netsmart<br>Software Engineer Intern @ Hydrotek Farms<br>SELF Fellow (Outreach President)<br>Catalyst Program</p>
+            </div>
+            <div class="detail-item">
+                <h3>Fun Fact</h3>
+                <p>I'm really good at drawing Greg from <i>Diary of a Wimpy Kid</i>. Just ask and I can do it on the spot.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
