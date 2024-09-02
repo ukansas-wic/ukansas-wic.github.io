@@ -1,0 +1,285 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #5D85C7;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1e6;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f1f1e6;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 800; /* Use extra bold weight for the main title */
+}
+
+.ghc-promo-text {
+    margin: 0;
+    font-weight: 800;
+    padding-left: 170px;
+    margin-top: 30px;
+    color: #F691A9
+    /* Use extra bold weight for the main title */
+}
+
+.ghc-promo-2 {
+    margin: 0;
+    font-weight: 800;
+    padding-left: 170px;
+    margin-top: 30px;
+    color: #000000
+    /* Use extra bold weight for the main title */
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    /* Sets a max width for large screens */
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    /* Ensures the slideshow takes full container width */
+    max-width: 100%;
+    /* Ensures it scales down with screen size */
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: contain;
+    /* Ensures full image is shown */
+    flex-shrink: 0;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+    /* Adjust for spacing from edge */
+}
+
+.next {
+    right: 10px;
+    /* Adjust for spacing from edge */
+}
+
+.side-logos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.side-logos.right {
+    right: 0;
+    left: auto;
+}
+
+.side-logos img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    button {
+        padding: 5px;
+        /* Smaller buttons on mobile */
+    }
+
+    h1 {
+        font-size: 2em;
+        /* Smaller title on mobile */
+    }
+}
+
+.quotes h1 {
+    font-size: 3rem; /* Optional: Adjust font size */
+    padding-left: 170px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #bad050;
+}
+
+.quotes-container {
+    width: 100%; /* Full width of the page */
+    background-color: #f1f1e6; /* Light gray background */
+    margin-top: -10px;
+    padding: 40px 20px; /* Padding around the quote content */
+}
+
+.quote-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto 20px auto; /* Center and add margin at the bottom */
+    text-align: left;
+    display: flex; /* Use flexbox to align text and image side by side */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space out the text and image */
+}
+
+.quote-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+    flex: 1; /* Allow the text to take up the available space */
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the name and image to the right */
+    gap: 20px;
+}
+
+.quote-author cite {
+    font-size: 1rem;
+    color: #000000;
+    margin-right: 50px; /* Add space between the name and the image */
+}
+
+.quote-author img {
+    width: 80px; /* Set image size */
+    height: 80px; /* Maintain square shape */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote-box:hover {
+    transform: translateY(-10px); /* Moves the box up slightly when hovered */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+.header-link {
+    text-decoration: none; /* Remove underline from the link */
+    display: block; /* Make the anchor tag behave like a block element */
+}
+
+.header-link .header h1 {
+    color: #467FAB; /* Initial color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.header-link:hover .header h1 {
+    color: #F691A9; /* Color on hover */
+}
+.accordion {
+    width: 88.5%; /* Set width as needed, or a specific value like 80% */
+    max-width: 100%; /* Ensure the accordion can expand to the full width */
+    margin: 30px 0 20px 0; /* Set margin-left to 0 to align it to the left */
+    background: #FFF;
+    border-radius: 4px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 20px 20px 20px 42px; /* Increase padding to make each item taller */
+    color: #000000;
+    font-size: 20px; /* Increase font size */
+    font-weight: 800;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+
+.accordion li:last-child .link { border-bottom: 0; }
+
+.accordion li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #000000;
+    transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+
+/* Hover state: change background to pink and text to red */
+.accordion li .link:hover {
+    background-color: #F691A9; /* Pink background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Hover state: change the icon color to white when hovering */
+.accordion li .link:hover i {
+    color: #ffffff; /* White icon color on hover */
+}
+
+.accordion li.open .link {
+    color: #ffffff; 
+    background-color: #F691A9; 
+}
+
+.accordion li.open i { color: #F691A9; }
+
+.accordion li.open i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    background: #ffffff;
+    font-size: 14px;
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove any default padding */
+    padding: 10px 0;
+}
+
+.submenu li { border-bottom: 1px solid #ffffff; }
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding: 20px; /* Increase padding to make each submenu item taller */
+    padding-left: 42px; /* Keep the padding consistent with the main items */
+    font-size: 18px; /* Increase font size for submenu items */
+    transition: all 0.25s ease;
+}
