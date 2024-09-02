@@ -3,19 +3,19 @@ body {
     color: #5D85C7;
     margin: 0;
     padding: 0;
-    background-color: #f1f1e6;
+    background-color: white;
 }
 
 .header {
     text-align: center;
     padding: 20px 0;
-    background-color: #f1f1e6;
+    background-color: white;
     margin-bottom: 10px;
 }
 h1 {
-    font-size: 3em;
+    font-size: 3rem;
     margin: 0;
-    font-weight: 800; /* Use extra bold weight for the main title */
+    font-weight: 900; /* Use extra bold weight for the main title */
 }
 
 .ghc-promo-text {
