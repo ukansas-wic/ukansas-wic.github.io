@@ -50,7 +50,7 @@
     margin-top: 40px;
     text-align: center;
     font-size: 2rem;
-    color: #467FAB;
+    color: #aec347;
 }
 
 /* Accordion and Tabs Styling */
@@ -65,22 +65,17 @@
 }
 
 .accordion-header {
-    cursor: pointer;
     padding: 20px;
-    background-color: #aec347;
+    background-color: #467FAB;
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
-    transition: background-color 0.3s;
 }
 
-.accordion-header:hover {
-    background-color: #F691A9;
-}
+
 
 .accordion-content {
-    display: none;
     padding: 20px;
     background-color: #f1f1e6;
 }
@@ -108,7 +103,7 @@
 }
 
 .tab.active {
-    background-color: #467FAB;
+    background-color: #aec347;
 }
 
 .tab-content {

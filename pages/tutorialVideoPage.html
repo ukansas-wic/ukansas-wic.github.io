@@ -97,11 +97,6 @@
     </div>
 
     <script>
-        document.querySelector('.accordion-header').addEventListener('click', function () {
-            this.classList.toggle('active');
-            const content = this.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
         
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', function () {
