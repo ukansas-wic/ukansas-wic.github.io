@@ -43,7 +43,7 @@ h1 {
     /* Sets a max width for large screens */
     margin: 0 auto;
     text-align: center;
-    background-color: white;
+    background-color: #f1f1e6;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -135,13 +135,13 @@ button {
 
 .quotes-container {
     width: 100%; /* Full width of the page */
-    background-color: #f1f1e6; /* Light gray background */
+    background-color: white; /* Light gray background */
     margin-top: -10px;
     padding: 40px 20px; /* Padding around the quote content */
 }
 
 .quote-box {
-    background-color: #ffffff;
+    background-color: #f1f1e6;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
