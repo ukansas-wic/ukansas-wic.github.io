@@ -20,11 +20,12 @@ body {
 /* Reset Margin and Padding for Headings */
 h2, .title {
     margin: 0;  /* Remove default margin */
-    padding-top: 10%git checkout -b new-branch-name
+    padding: 20px 0;
 ; /* Remove default padding */
     text-align: center;
     font-size: 3rem;
     color: #467FAB;
+    font-weight: 900;
 }
 
 /* Calendar Container Styling */
