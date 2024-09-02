@@ -3,19 +3,20 @@ body {
     color: #5D85C7;
     margin: 0;
     padding: 15;
-    background-color: #f1f1e6;
+    background-color: white;
 }
 
 .header {
     text-align: center;
     padding: 20px 0;
-    background-color: #f1f1e6;
+    background-color: white;
     margin-bottom: 10px;
 }
 .title {
     font-size: 3rem;
     margin: 2%;
     text-align: center;
+    font-weight: 900;
 }
 .gcPromoText {
     margin-left: 10%;
@@ -40,7 +41,7 @@ body {
     /* Sets a max width for large screens */
     margin: 0 auto;
     text-align: center;
-    background-color: white;
+    background-color: #f1f1e6;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -109,18 +110,18 @@ button {
 
 .quotes-container {
     width: 100%; /* Full width of the page */
-    background-color: #f1f1e6; /* Light gray background */
+    background-color: white; /* Light gray background */
     margin-top: -10px;
     padding: 40px 20px; /* Padding around the quote content */
 }
 
 .quote-box {
-    background-color: #ffffff;
+    background-color: #f1f1e6;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 60%; /* Max width for content */
-    margin: 0 auto 20px auto; /* Center and add margin at the bottom */
+    margin: 0 auto 40px auto; /* Center and add margin at the bottom */
     text-align: left;
     display: flex; /* Use flexbox to align text and image side by side */
     align-items: center; /* Center content vertically */
@@ -131,7 +132,7 @@ button {
     margin: 0;
     font-size: 1.1rem;
     color: #333;
-    font-weight: 100;
+    font-weight: 400;
     padding: 2%;
     flex: 1; /* Allow the text to take up the available space */
 }

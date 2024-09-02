@@ -30,9 +30,10 @@ We welcome contributions! If you'd like to suggest improvements or add features,
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature-branch-name`.
-3. Make your changes and commit them: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-branch-name`.
-5. Open a pull request to the `main` branch.
+3. Make your changes: `git add . 'Add some feature'`.
+4. commit them: `git commit -m 'Commit feature'`.
+5. Push to the branch: `git push origin feature-branch-name`.
+6. Open a pull request to the `main` branch.
 
 ## 💌 Contact
 
