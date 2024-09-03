@@ -1,11 +1,6 @@
-/* style for navbar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-/* Style for navbar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +8,7 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar Styling */
 nav {
     width: 100%;
     padding: 1% 5%; /* Adjusted padding for spacing */
@@ -29,6 +25,7 @@ nav .logo {
     align-items: center;
 }
 
+
 nav .logo img {
     margin-right: 10px;
 }
@@ -38,11 +35,16 @@ nav .logo a {
     font-weight: 800; /* Unified font weight */
     color: #333; /* Unified color */
     text-decoration: none;
+    transition: .3s;
+}
+nav .logo a:hover{
+    color: #F691A9;
 }
 
 nav ul {
     display: flex;
     margin-left: auto;
+    gap: 20px; /* Add space between nav items */
 }
 
 nav li {
@@ -51,22 +53,56 @@ nav li {
 
 nav li a {
     font-weight: 800; /* Unified font weight */
-    font-size: 1.5rem; /* Consistent font size */
+    font-size: 1.1rem; /* Consistent font size */
     color: #467FAB; /* Consistent color */
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* Adjust padding for spacing */
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for hover */
+    white-space: nowrap;
 }
 
 nav li a:hover {
     color: #F691A9; /* Unified hover color */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap; /* Allows wrapping */
+        justify-content: flex-end;
+    }
+
+    nav li a {
+        font-size: .75rem; /* Slightly reduced size */
+        padding: 0 1rem; /* Adjust padding */
+    }
+    nav .logo a {
+        font-size: 1rem; /* Consistent font size */
+        font-weight: 800; /* Unified font weight */
+        color: #333; /* Unified color */
+        text-decoration: none;
+    }
+}
+
+/* Smaller screens (small tablets and large phones) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack logo and links */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav .logo {
+        margin-bottom: 1rem; /* Add space between logo and links */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical list for links */
+        width: 100%; /* Full width for the list */
+        margin-left: 0; /* Reset margin */
+        gap: 10px; /* Adjust gap for smaller screens */
     }
 
     nav li a {
@@ -75,13 +111,8 @@ nav li a:hover {
     }
 }
 
-@media (max-width: 480px) {
-    nav .logo a {
-        font-size: 1rem; /* Further reduce logo text size */
-    }
 
-    nav li a {
-        font-size: 1rem; /* Further reduce nav link size */
-        padding: 0 0.5rem; /* Further reduce padding */
-    }
-}
+
+
+
+
