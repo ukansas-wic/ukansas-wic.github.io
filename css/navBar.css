@@ -25,6 +25,7 @@ nav .logo {
     align-items: center;
 }
 
+
 nav .logo img {
     margin-right: 10px;
 }
@@ -34,6 +35,10 @@ nav .logo a {
     font-weight: 800; /* Unified font weight */
     color: #333; /* Unified color */
     text-decoration: none;
+    transition: .3s;
+}
+nav .logo a:hover{
+    color: #F691A9;
 }
 
 nav ul {

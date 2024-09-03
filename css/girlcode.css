@@ -37,7 +37,7 @@ body {
 }
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 700px;
     /* Sets a max width for large screens */
     margin: 0 auto;
     text-align: center;
@@ -64,7 +64,7 @@ body {
 
 .gallery-slide img {
     width: 100%;
-    height: auto;
+    height: 800px;
     /* Maintains aspect ratio */
     object-fit: contain;
     /* Ensures full image is shown */
