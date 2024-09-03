@@ -105,7 +105,8 @@
             })
             .catch((error) => {
                 console.error('Error:', error);
-                alert('There was an error sending your message: ' + error.message);
+                alert('There was an error adding you to the newsletter, please email ukansaswic@gmail.com');
+                console.log(error.message)
             });
     
     };
@@ -151,7 +152,8 @@
             })
             .catch((error) => {
                 console.error('Error:', error);
-                alert('There was an error sending your message: ' + error.message);
+                alert('There was an error sending your message, please email ukansaswic@gmail.com');
+                console.log(error.message)
             });
     
     };
