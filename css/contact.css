@@ -253,3 +253,34 @@ h4 {
         height: 100px;;
     }
 }
+
+.sponsorship {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 20px;
+    padding: 2%;
+    width: 40%; /* Adjusted width to fit content */
+    max-width: 900px; /* Maximum width to control stretching */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsorship a{
+    margin-top: 2%;
+    text-decoration: none;
+    color: #467FAB;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: .3s;
+}
+.sponsorship a:hover{
+    transform: scale(1.1);
+}
+.sponsorship h2{
+    color: #F691A9;
+}
