@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="../css/vid_style.css">
     <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="icon" href="../wiclogo-comp.png">
     <title>Tutorial Videos</title>
 </head>
 
@@ -13,15 +14,15 @@
     <nav>
         <div class="logo">
             <img src="../wiclogo-comp.png" alt="Logo"/>
-            <a href="#">Women in Computing</a>
+            <a href="../index.html">Women in Computing</a>
         </div>
         <ul class="main-nav">
             <li><a href="../index.html">About</a></li>
             <li><a href="calendar.html">Calendar</a></li>
             <li><a href="ghc.html">GHC</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="tutorialVideoPage.html">Tutorial Videos</a></li>
-            <li><a href="#">GirlCode</a></li>
+            <li><a href="tutorialVideoPage.html">Learning Resources</a></li>
+            <li><a href="girlcode.html">GirlCode</a></li>
             <li><a href="meet_the_team.html">Meet the Team</a></li>
             <li><a href="contactUs.html">Contact WIC</a></li>
         </ul>
@@ -50,7 +51,7 @@
                     <div class="folder-container">
                         <div class="folder">
                             <div class="folder-icon">
-                                <img src="open-folder.png" alt="Folder Icon">
+                                <img src="../pictures/folder.png" alt="Folder Icon">
                             </div>
                             <div class="folder-label">
                                 <a href="path/to/presentation1.pdf" download>Meeting 1</a>
@@ -58,7 +59,7 @@
                         </div>
                         <div class="folder">
                             <div class="folder-icon">
-                                <img src="open-folder.png" alt="Folder Icon">
+                                <img src="../pictures/folder.png" alt="Folder Icon">
                             </div>
                             <div class="folder-label">
                                 <a href="path/to/presentation2.pdf" download>Meeting 2</a>
@@ -71,11 +72,11 @@
                     <div class="folder-container">
                         <div class="folder">
                             <div class="folder-icon">
-                                <img src="open-folder.png" alt="Folder Icon">
+                                <img src="../pictures/folder.png" alt="Folder Icon">
                             </div>
                             <div class="folder-label">
-                                <a href="path/to/presentation1.pdf" download>Meeting 1</a>
-                            </div>
+                                <a href="path/to/presentation1.pdf" download>Meeting 1</a> <!--Dummy file path for downloading presenation, can change later-->
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
                     <div class="folder-container">
                         <div class="folder">
                             <div class="folder-icon">
-                                <img src="open-folder.png" alt="Folder Icon">
+                                <img src="../pictures/folder.png" alt="Folder Icon">
                             </div>
                             <div class="folder-label">
                                 <a href="path/to/presentation1.pdf" download>Meeting 1</a>
@@ -96,6 +97,17 @@
         </div>
     </div>
 
-    <script src="presentation.js"></script>    
+    <script>
+        
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        
+                this.classList.add('active');
+                document.getElementById(`tab-${this.dataset.year}`).classList.add('active');
+            });
+        });
+    </script>    
 </body>
 </html

@@ -1,13 +1,12 @@
 h1 {
     text-align: center;
-    margin-top: 1%;
     color: #467FAB; 
     font-size: 3rem;
     font-family: 'Inter', sans-serif;
     font-weight: 900;
     padding-left: 0%;
-    padding-bottom: 5%;
-    margin-bottom: 0;
+    padding: 20px 0;
+    margin-bottom: 3%;
 }
 
 h3 {
@@ -34,6 +33,8 @@ h4 {
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Align content vertically */
     gap: 80px; /* Space between the email icon and the contact form */
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .contact {
@@ -223,4 +224,32 @@ h4 {
     color: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     transform: scale(1.1);
+}
+@media only screen and (max-width: 1350px) {
+    .horizontal-container {
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Align content vertically */
+        gap: 80px; /* Space between the email icon and the contact form */
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    h1{
+        font-size: 2.1rem;
+    }
+    .horizontal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        width: 90%;
+    }
+
+    .email-icon {
+        width: 50%; /* Adjust for smaller screens */
+    }
+    .pictures{
+        height: 100px;;
+    }
 }

@@ -20,18 +20,19 @@ body {
 /* Reset Margin and Padding for Headings */
 h2, .title {
     margin: 0;  /* Remove default margin */
-    padding-top: 10%git checkout -b new-branch-name
+    padding: 20px 0;
 ; /* Remove default padding */
     text-align: center;
     font-size: 3rem;
     color: #467FAB;
+    font-weight: 900;
 }
 
 /* Calendar Container Styling */
 .calendar-container {
     margin-top: 1%; /* Slight margin to separate title from container */
     width: 80%; /* Adjust width to a percentage for responsiveness */
-    max-width: 50%;
+    max-width: 70%;
     padding: 2%; /* Adjust padding to reduce extra space */
     background: #FFFEFE; /* Add # for the color to be recognized */
     border-radius: 2%; /* Adjusted for better scalability */
