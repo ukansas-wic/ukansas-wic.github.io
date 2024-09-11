@@ -44,8 +44,9 @@ nav .logo a:hover{
 }
 
 nav ul {
+
     display: flex;
-    margin-left: auto;
+    margin-left: 5%;
     gap: 20px; /* Add space between nav items */
 }
 
@@ -84,8 +85,18 @@ nav li a:hover {
     nav .logo a {
         font-size: 1rem; /* Consistent font size */
         font-weight: 800; /* Unified font weight */
-        color: #333; /* Unified color */
+        color: #F691A9; /* Unified color */
         text-decoration: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    nav .logo a {
+        font-size: 2.4rem; /* Consistent font size */
+        font-weight: 800; /* Unified font weight */
+        color: #F691A9; /* Unified color */
+        text-decoration: none;
+        margin-right: 1%;
     }
 }
 
@@ -97,6 +108,9 @@ nav li a:hover {
     }
 
     nav .logo {
+        margin-bottom: 1rem; /* Add space between logo and links */
+    }
+    nav .logo a {
         margin-bottom: 1rem; /* Add space between logo and links */
     }
 
