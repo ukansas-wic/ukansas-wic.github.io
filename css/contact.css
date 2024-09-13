@@ -52,6 +52,7 @@ h4 {
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
     margin-top: 0%;
+    background-color: white;
 }
 
 #contact-form {
@@ -271,6 +272,7 @@ h4 {
     margin-bottom: 3%;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
 }
 
 .sponsorship a{

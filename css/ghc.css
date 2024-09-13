@@ -136,7 +136,7 @@ button {
 
 .quotes-container {
     width: 100%; /* Full width of the page */
-    background-color: white; /* Light gray background */
+    background-color:#f5f5f5; /* Light gray background */
     margin-top: -10px;
     padding: 40px 20px; /* Padding around the quote content */
 }
