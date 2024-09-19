@@ -138,9 +138,13 @@
     width: 70px;
     height: 70px;
     background-color: #f1f1e6;
+    transition: transform 0.3s ease;
+}
+.folder-icon img:hover {
+    transform: scale(1.1);
 }
 
-.folder-label a {
+.folder-label p {
     margin-top: 10px;
     font-size: 1rem;
     color: #467FAB;
@@ -149,9 +153,6 @@
     background-color: #f1f1e6;
 }
 
-.folder-label a:hover {
-    color: #F691A9;
-}
 
 @media (max-width: 768px) {
     .vid-title {
