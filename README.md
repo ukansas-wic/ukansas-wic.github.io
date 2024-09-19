@@ -38,7 +38,7 @@ We welcome contributions! If you'd like to suggest improvements or add features,
 
 ## 💌 Contact
 
-If you have any questions or need assistance, please reach out to us at [contact](mailto:ukansaswic@gmail.com).
+If you have any questions or need assistance, please reach out to us [here](mailto:ukansaswic@gmail.com).
 
 ---
 
