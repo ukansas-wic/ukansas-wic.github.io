@@ -30,14 +30,15 @@ We welcome contributions! If you'd like to suggest improvements or add features,
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature-branch-name`.
-3. Make your changes: `git add . 'Add some feature'`.
-4. commit them: `git commit -m 'Commit feature'`.
+3. Make your changes
+4. Adding your changes: `git add . `.
+4. Commit them: `git commit -m 'Describe the feature in 1 sentence'`.
 5. Push to the branch: `git push origin feature-branch-name`.
-6. Open a pull request to the `main` branch.
+6. Open a pull request to the `main` branch in ukansas-wic repo.
 
 ## 💌 Contact
 
-If you have any questions or need assistance, please reach out to us at [contact](mailto:ukansaswic@gmail.com).
+If you have any questions or need assistance, please reach out to us [here](mailto:ukansaswic@gmail.com).
 
 ---
 
