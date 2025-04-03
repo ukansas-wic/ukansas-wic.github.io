@@ -112,17 +112,23 @@
 
 .tab-content {
     display: none;
-    
+    background-color: #f1f1e6;
 }
 
 .tab-content.active {
     display: block;
+    width: 100%;
+    background-color: #f1f1e6;
 }
 .folder-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    width: 600px; /* ← smaller width */
+    margin: 0 auto; /* centers it */
+    background-color: #f1f1e6;
+}
+.folder-container a{
     background-color: #f1f1e6;
 }
 
@@ -132,6 +138,7 @@
     align-items: center;
     text-align: center;
     background-color: #f1f1e6;
+    
 }
 
 .folder-icon img {
@@ -145,7 +152,6 @@
 }
 
 .folder-label p {
-    margin-top: 10px;
     font-size: 1rem;
     color: #467FAB;
     text-decoration: none;
